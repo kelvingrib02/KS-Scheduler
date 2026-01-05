@@ -1,3 +1,4 @@
+using KS.Scheduler.Application.UseCases;
 using KS.Scheduler.Domain.Interfaces;
 using KS.Scheduler.Infrastructure.Persistence;
 using KS.Scheduler.Infrastructure.Repositories;
@@ -13,6 +14,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IJogadorRepository, JogadorRepository>();
 builder.Services.AddScoped<IPartidaRepository, PartidaRepository>(); 
 builder.Services.AddScoped<IPresencaRepository, PresencaRepository>();
+builder.Services.AddScoped<ConfirmarPresencaUseCase>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

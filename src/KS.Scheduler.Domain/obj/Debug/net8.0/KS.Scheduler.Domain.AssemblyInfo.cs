@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KS.Scheduler.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+808d8a61c74990cbdffe8c8ba63241d0ed366fa4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8506773b30d0b4e497f0892fbb9555e73b0b23cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("KS.Scheduler.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KS.Scheduler.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
