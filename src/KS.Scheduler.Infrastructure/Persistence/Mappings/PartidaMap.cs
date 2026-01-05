@@ -12,6 +12,7 @@ namespace KS.Scheduler.Infrastructure.Persistence.Mappings
 
             builder.Property(p => p.Local).IsRequired().HasColumnType("varchar(200)");
 
+            //uma partida pode ter muitas presenças por meio da chave estrangeira PartidaId na entidade Presença
             builder.HasMany(p => p.Presencas).WithOne(pr => pr.Partida).HasForeignKey(pr => pr.PartidaId);
         }
     }

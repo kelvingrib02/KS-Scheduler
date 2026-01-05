@@ -9,6 +9,7 @@ namespace KS.Scheduler.Infrastructure.Persistence.Mappings
         public void Configure(EntityTypeBuilder<Presenca> builder)
         {
             builder.HasKey(p => p.Id);
+
             builder.HasIndex(p => new { p.PartidaId, p.JogadorId }).IsUnique();
         }
     }

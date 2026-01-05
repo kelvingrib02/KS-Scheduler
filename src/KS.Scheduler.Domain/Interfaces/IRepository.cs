@@ -11,7 +11,7 @@ namespace KS.Scheduler.Domain.Interfaces
         Task Adicionar(T entity);
         Task<T> ObterPorId(Guid id);
         Task<IEnumerable<T>> ObterTodos();
-        Task<IEnumerable<T>> Buscar(Expression<Func<T, bool>> predicate); // Para filtros personalizados
+        Task<IEnumerable<T>> Buscar(Expression<Func<T, bool>> predicate);
         void Atualizar(T entity);
         void Remover(Guid id);
     }

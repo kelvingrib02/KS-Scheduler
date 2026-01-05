@@ -14,6 +14,7 @@ namespace KS.Scheduler.Infrastructure.Persistence.Mappings
 
             builder.Property(j => j.Telefone).IsRequired().HasColumnType("varchar(20)");
 
+            //um jogador pode ter varias presencas por meio da chave estrangeira JogadorId na entidade Presenca
             builder.HasMany(j => j.Presencas).WithOne(p => p.Jogador).HasForeignKey(p => p.JogadorId);
         }
     }
