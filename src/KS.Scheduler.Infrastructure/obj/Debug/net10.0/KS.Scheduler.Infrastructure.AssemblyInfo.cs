@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KS.Scheduler.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+041e99549ea5b02fb2ab987c25d55d40088508a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d39e149e56654a2cc276988e1100f6d563449b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("KS.Scheduler.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KS.Scheduler.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
