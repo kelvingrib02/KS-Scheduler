@@ -8,17 +8,15 @@ namespace KS.Scheduler.Domain.Entities
 {
     public class Partida : Entity
     {
-        protected Partida()
-        {
-            Presencas = new List<Presenca>();
-        }
-        public Partida(DateTime dataHora, string local, TipoJogo tipoJogo, decimal valorTotal)
+        protected Partida() { }
+
+        public Partida(DateTime dataHora, string local, TipoJogo tipoJogo, decimal valorTotal, decimal? valorPorPessoa = null)
         {
             DataHora = dataHora;
             Local = local;
             TipoJogo = tipoJogo;
             ValorTotal = valorTotal;
-            Status = true;
+            ValorPorPessoa = valorPorPessoa ?? 0;
             Presencas = new List<Presenca>();
         }
 
@@ -26,20 +24,8 @@ namespace KS.Scheduler.Domain.Entities
         public string Local { get; private set; }
         public TipoJogo TipoJogo { get; private set; }
         public decimal ValorTotal { get; private set; }
-        public decimal? ValorPorPessoa { get; private set; }
-        public bool Status { get; private set; }
-
+        public decimal ValorPorPessoa { get; private set; }
         public virtual ICollection<Presenca> Presencas { get; private set; }
-
-        public void CalcularValorPorPessoa()
-        {
-            var confirmados = Presencas.Count(p => p.Status == StatusPresenca.Confirmado || p.Status == StatusPresenca.Pago);
-            if (confirmados > 0)
-            {
-                ValorPorPessoa = ValorTotal / confirmados;
-            }
-        }
-
         public void AdicionarJogador(Jogador jogador)
         {
             if (Presencas.Any(p => p.JogadorId == jogador.Id))
@@ -48,9 +34,13 @@ namespace KS.Scheduler.Domain.Entities
             var novaPresenca = new Presenca(this.Id, jogador.Id);
             Presencas.Add(novaPresenca);
         }
-        public void FinalizarPartida()
+        public void CalcularValorPorPessoa()
         {
-            Status = false;
+            var totalConfirmados = Presencas.Count(x => x.Status == StatusPresenca.Confirmado || x.Status == StatusPresenca.Pago);
+            if (totalConfirmados > 0)
+            {
+                ValorPorPessoa = ValorTotal / totalConfirmados;
+            }
         }
     }
 }
