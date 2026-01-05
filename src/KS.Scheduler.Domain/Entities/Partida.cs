@@ -1,0 +1,56 @@
+﻿using KS.Scheduler.Domain.Entities.Base;
+using KS.Scheduler.Domain.Enums;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace KS.Scheduler.Domain.Entities
+{
+    public class Partida : Entity
+    {
+        protected Partida()
+        {
+            Presencas = new List<Presenca>();
+        }
+        public Partida(DateTime dataHora, string local, TipoJogo tipoJogo, decimal valorTotal)
+        {
+            DataHora = dataHora;
+            Local = local;
+            TipoJogo = tipoJogo;
+            ValorTotal = valorTotal;
+            Status = true;
+            Presencas = new List<Presenca>();
+        }
+
+        public DateTime DataHora { get; private set; }
+        public string Local { get; private set; }
+        public TipoJogo TipoJogo { get; private set; }
+        public decimal ValorTotal { get; private set; }
+        public decimal? ValorPorPessoa { get; private set; }
+        public bool Status { get; private set; }
+
+        public virtual ICollection<Presenca> Presencas { get; private set; }
+
+        public void CalcularValorPorPessoa()
+        {
+            var confirmados = Presencas.Count(p => p.Status == StatusPresenca.Confirmado || p.Status == StatusPresenca.Pago);
+            if (confirmados > 0)
+            {
+                ValorPorPessoa = ValorTotal / confirmados;
+            }
+        }
+
+        public void AdicionarJogador(Jogador jogador)
+        {
+            if (Presencas.Any(p => p.JogadorId == jogador.Id))
+                return;
+
+            var novaPresenca = new Presenca(this.Id, jogador.Id);
+            Presencas.Add(novaPresenca);
+        }
+        public void FinalizarPartida()
+        {
+            Status = false;
+        }
+    }
+}
