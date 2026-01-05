@@ -1,0 +1,12 @@
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Domain\bin\Debug\net8.0\KS.Scheduler.Domain.deps.json
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Domain\bin\Debug\net8.0\KS.Scheduler.Domain.dll
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Domain\bin\Debug\net8.0\KS.Scheduler.Domain.pdb
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Domain\obj\Debug\net8.0\KS.Scheduler.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Domain\obj\Debug\net8.0\KS.Scheduler.Domain.AssemblyInfoInputs.cache
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Domain\obj\Debug\net8.0\KS.Scheduler.Domain.AssemblyInfo.cs
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Domain\obj\Debug\net8.0\KS.Scheduler.Domain.csproj.CoreCompileInputs.cache
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Domain\obj\Debug\net8.0\KS.Scheduler.Domain.sourcelink.json
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Domain\obj\Debug\net8.0\KS.Scheduler.Domain.dll
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Domain\obj\Debug\net8.0\refint\KS.Scheduler.Domain.dll
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Domain\obj\Debug\net8.0\KS.Scheduler.Domain.pdb
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Domain\obj\Debug\net8.0\ref\KS.Scheduler.Domain.dll

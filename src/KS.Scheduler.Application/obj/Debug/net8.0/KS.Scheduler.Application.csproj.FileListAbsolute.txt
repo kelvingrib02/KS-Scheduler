@@ -1,0 +1,16 @@
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\bin\Debug\net8.0\KS.Scheduler.Application.deps.json
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\bin\Debug\net8.0\KS.Scheduler.Application.dll
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\bin\Debug\net8.0\KS.Scheduler.Application.pdb
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\bin\Debug\net8.0\KS.Scheduler.Domain.dll
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\bin\Debug\net8.0\KS.Scheduler.Domain.pdb
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\obj\Debug\net8.0\KS.Scheduler.Application.csproj.AssemblyReference.cache
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\obj\Debug\net8.0\KS.Scheduler.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\obj\Debug\net8.0\KS.Scheduler.Application.AssemblyInfoInputs.cache
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\obj\Debug\net8.0\KS.Scheduler.Application.AssemblyInfo.cs
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\obj\Debug\net8.0\KS.Scheduler.Application.csproj.CoreCompileInputs.cache
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\obj\Debug\net8.0\KS.Scheduler.Application.sourcelink.json
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\obj\Debug\net8.0\KS.Sched.FA1E1EF6.Up2Date
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\obj\Debug\net8.0\KS.Scheduler.Application.dll
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\obj\Debug\net8.0\refint\KS.Scheduler.Application.dll
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\obj\Debug\net8.0\KS.Scheduler.Application.pdb
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Application\obj\Debug\net8.0\ref\KS.Scheduler.Application.dll

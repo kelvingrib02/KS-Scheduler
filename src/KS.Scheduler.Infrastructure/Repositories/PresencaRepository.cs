@@ -3,6 +3,8 @@ using KS.Scheduler.Domain.Interfaces;
 using KS.Scheduler.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace KS.Scheduler.Infrastructure.Repositories
@@ -12,10 +14,13 @@ namespace KS.Scheduler.Infrastructure.Repositories
         public PresencaRepository(KSSchedulerDbContext context) : base(context)
         {
         }
-
-        public async Task<Presenca> ObterPorPartidaEJogador(Guid partidaId, Guid jogadorId)
+        public async Task<IEnumerable<Presenca>> ObterPorJogador(Guid jogadorId)
         {
-            return await DbSet.AsNoTracking().FirstOrDefaultAsync(p => p.PartidaId == partidaId && p.JogadorId == jogadorId);
+            return await DbSet.AsNoTracking().Where(p => p.JogadorId == jogadorId).Include(p => p.Partida).ToListAsync();
+        }
+        public async Task<IEnumerable<Presenca>> ObterConfirmadosPorPartida(Guid partidaId)
+        {
+            return await DbSet.AsNoTracking().Where(p => p.PartidaId == partidaId).Include(p => p.Jogador).ToListAsync();
         }
     }
 }
