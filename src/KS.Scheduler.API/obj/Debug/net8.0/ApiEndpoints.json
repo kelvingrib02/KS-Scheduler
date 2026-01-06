@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "KS.Scheduler.Api.Controllers.PartidasController",
+    "Method": "CancelarPresenca",
+    "RelativePath": "api/Partidas/cancelar-presenca",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "KS.Scheduler.Application.DTOs.CancelarPresencaInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KS.Scheduler.Api.Controllers.PartidasController",
     "Method": "ConfirmarPresenca",
     "RelativePath": "api/Partidas/confirmar-presenca",
     "HttpMethod": "POST",

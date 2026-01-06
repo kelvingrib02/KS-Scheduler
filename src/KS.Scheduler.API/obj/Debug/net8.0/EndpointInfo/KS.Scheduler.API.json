@@ -67,6 +67,37 @@
         }
       }
     },
+    "/api/Partidas/cancelar-presenca": {
+      "delete": {
+        "tags": [
+          "Partidas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelarPresencaInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelarPresencaInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelarPresencaInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Presenca": {
       "post": {
         "tags": [
@@ -101,6 +132,20 @@
   },
   "components": {
     "schemas": {
+      "CancelarPresencaInput": {
+        "type": "object",
+        "properties": {
+          "partidaId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "telefoneJogador": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ConfirmarPresencaInput": {
         "type": "object",
         "properties": {
