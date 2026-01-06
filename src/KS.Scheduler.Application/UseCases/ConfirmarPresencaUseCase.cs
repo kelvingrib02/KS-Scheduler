@@ -1,6 +1,6 @@
 ﻿using KS.Scheduler.Application.DTOs;
 using KS.Scheduler.Domain.Entities;
-using KS.Scheduler.Domain.Enums; // Importante para o NivelHabilidade
+using KS.Scheduler.Domain.Enums;
 using KS.Scheduler.Domain.Interfaces;
 using System;
 using System.Threading.Tasks;
@@ -31,8 +31,6 @@ namespace KS.Scheduler.Application.UseCases
             if (jogador == null)
             {
                 jogador = new Jogador(input.NomeJogador, input.TelefoneJogador, input.Posicao, NivelHabilidade.Iniciante);
-
-                await _uow.Jogadores.Adicionar(jogador);
             }
 
             partida.AdicionarJogador(jogador);
