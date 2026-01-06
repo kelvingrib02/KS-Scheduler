@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KS.Scheduler.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc0fb6a4c9c650dcd48ffbf90a7c38ef6a20e9fd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9926f368cf010f6d0d8353c2c656fc83e37a0ad1")]
 [assembly: System.Reflection.AssemblyProductAttribute("KS.Scheduler.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KS.Scheduler.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

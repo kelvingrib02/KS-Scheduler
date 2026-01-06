@@ -6,9 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using static System.Net.WebRequestMethods;
 
 var builder = WebApplication.CreateBuilder(args);
-var urlApi = "http://localhost:5290";
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(urlApi) });
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
@@ -24,6 +22,7 @@ builder.Services.AddScoped<IPresencaRepository, PresencaRepository>();
 builder.Services.AddScoped<CriarPartidaUseCase>();
 builder.Services.AddScoped<ConfirmarPresencaUseCase>();
 builder.Services.AddScoped<CancelarPresencaUseCase>();
+builder.Services.AddScoped<ObterPartidaUseCase>();
 
 builder.Services.AddCors(options =>
 {

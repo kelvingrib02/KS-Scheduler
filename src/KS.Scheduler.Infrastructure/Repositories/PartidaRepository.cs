@@ -29,5 +29,9 @@ namespace KS.Scheduler.Infrastructure.Repositories
         {
             await DbSet.AddAsync(partida);
         }
+        public async Task<Partida?> ObterPorIdCompletoAsync(Guid id)
+        {
+            return await DbSet.Include(p => p.Presencas).ThenInclude(pr => pr.Jogador).FirstOrDefaultAsync(p => p.Id == id);
+        }
     }
 }
