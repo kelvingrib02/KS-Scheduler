@@ -9,5 +9,6 @@ namespace KS.Scheduler.Domain.Interfaces
     {
         Task<Partida> ObterPartidaComPresencas(Guid id);
         Task<IEnumerable<Partida>> ObterPartidasPorData(DateTime inicio, DateTime fim);
+        Task CriarAsync(Partida partida);
     }
 }

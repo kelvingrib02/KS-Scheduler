@@ -40,5 +40,19 @@ namespace KS.Scheduler.Api.Controllers
                 });
             }
         }
+
+        [HttpPost]
+        public async Task<IActionResult> CriarPartida([FromServices] CriarPartidaUseCase useCase, [FromBody] CriarPartidaInput input)
+        {
+            try
+            {
+                var partidaId = await useCase.Execute(input);
+                return Ok(new { sucesso = true, partidaId = partidaId });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { sucesso = false, erro = ex.Message });
+            }
+        }
     }
 }

@@ -14,13 +14,20 @@ namespace KS.Scheduler.Infrastructure.Repositories
         public PartidaRepository(KSSchedulerDbContext context) : base(context)
         {
         }
-        public async Task<Partida> ObterPartidaComPresencas(Guid id)
+
+        public async Task<Partida?> ObterPartidaComPresencas(Guid id)
         {
             return await DbSet.Include(p => p.Presencas).ThenInclude(presenca => presenca.Jogador).FirstOrDefaultAsync(p => p.Id == id);
         }
+
         public async Task<IEnumerable<Partida>> ObterPartidasPorData(DateTime dataInicio, DateTime dataFim)
         {
             return await DbSet.AsNoTracking().Where(p => p.DataHora >= dataInicio && p.DataHora <= dataFim).OrderBy(p => p.DataHora).ToListAsync();
+        }
+
+        public async Task CriarAsync(Partida partida)
+        {
+            await DbSet.AddAsync(partida);
         }
     }
 }
