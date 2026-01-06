@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Api\\KS.Scheduler.API.csproj": {}
+    "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\KS.Scheduler.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Api\\KS.Scheduler.API.csproj": {
+    "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\KS.Scheduler.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Api\\KS.Scheduler.API.csproj",
+        "projectUniqueName": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\KS.Scheduler.API.csproj",
         "projectName": "KS.Scheduler.API",
-        "projectPath": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Api\\KS.Scheduler.API.csproj",
+        "projectPath": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\KS.Scheduler.API.csproj",
         "packagesPath": "C:\\Users\\55129\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Api\\obj\\",
+        "outputPath": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages"

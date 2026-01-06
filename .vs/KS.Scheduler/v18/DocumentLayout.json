@@ -7,8 +7,28 @@
       "RelativeMoniker": "D:0:0:{835711E5-8036-4456-8CC7-F9A3EF76C557}|src\\KS.Scheduler.API\\KS.Scheduler.API.csproj|solutionrelative:src\\ks.scheduler.api\\controllers\\partidascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{49F19D9E-C65A-4557-A299-7739F96FBD44}|src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.application\\usecases\\cancelarpresencausecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49F19D9E-C65A-4557-A299-7739F96FBD44}|src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj|solutionrelative:src\\ks.scheduler.application\\usecases\\cancelarpresencausecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{835711E5-8036-4456-8CC7-F9A3EF76C557}|src\\KS.Scheduler.API\\KS.Scheduler.API.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{835711E5-8036-4456-8CC7-F9A3EF76C557}|src\\KS.Scheduler.API\\KS.Scheduler.API.csproj|solutionrelative:src\\ks.scheduler.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49F19D9E-C65A-4557-A299-7739F96FBD44}|src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.application\\dtos\\cancelarpresencainput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49F19D9E-C65A-4557-A299-7739F96FBD44}|src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj|solutionrelative:src\\ks.scheduler.application\\dtos\\cancelarpresencainput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{49F19D9E-C65A-4557-A299-7739F96FBD44}|src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.application\\usecases\\confirmarpresencausecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49F19D9E-C65A-4557-A299-7739F96FBD44}|src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj|solutionrelative:src\\ks.scheduler.application\\usecases\\confirmarpresencausecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A626BBF9-2264-4669-9BE2-EE58FE913867}|src\\KS.Scheduler.Domain\\KS.Scheduler.Domain.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.domain\\entities\\partida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A626BBF9-2264-4669-9BE2-EE58FE913867}|src\\KS.Scheduler.Domain\\KS.Scheduler.Domain.csproj|solutionrelative:src\\ks.scheduler.domain\\entities\\partida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A626BBF9-2264-4669-9BE2-EE58FE913867}|src\\KS.Scheduler.Domain\\KS.Scheduler.Domain.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.domain\\entities\\jogador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A626BBF9-2264-4669-9BE2-EE58FE913867}|src\\KS.Scheduler.Domain\\KS.Scheduler.Domain.csproj|solutionrelative:src\\ks.scheduler.domain\\entities\\jogador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,13 +46,78 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\KS.Scheduler.API\\Program.cs",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\Program.cs",
+              "RelativeToolTip": "src\\KS.Scheduler.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T02:34:42.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CancelarPresencaUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Application\\UseCases\\CancelarPresencaUseCase.cs",
+              "RelativeDocumentMoniker": "src\\KS.Scheduler.Application\\UseCases\\CancelarPresencaUseCase.cs",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Application\\UseCases\\CancelarPresencaUseCase.cs",
+              "RelativeToolTip": "src\\KS.Scheduler.Application\\UseCases\\CancelarPresencaUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T02:30:06.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Partida.cs",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Domain\\Entities\\Partida.cs",
+              "RelativeDocumentMoniker": "src\\KS.Scheduler.Domain\\Entities\\Partida.cs",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Domain\\Entities\\Partida.cs",
+              "RelativeToolTip": "src\\KS.Scheduler.Domain\\Entities\\Partida.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwC8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T02:29:27.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Jogador.cs",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Domain\\Entities\\Jogador.cs",
+              "RelativeDocumentMoniker": "src\\KS.Scheduler.Domain\\Entities\\Jogador.cs",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Domain\\Entities\\Jogador.cs",
+              "RelativeToolTip": "src\\KS.Scheduler.Domain\\Entities\\Jogador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T02:29:26.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CancelarPresencaInput.cs",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Application\\DTOs\\CancelarPresencaInput.cs",
+              "RelativeDocumentMoniker": "src\\KS.Scheduler.Application\\DTOs\\CancelarPresencaInput.cs",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Application\\DTOs\\CancelarPresencaInput.cs",
+              "RelativeToolTip": "src\\KS.Scheduler.Application\\DTOs\\CancelarPresencaInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T02:29:05.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ConfirmarPresencaUseCase.cs",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Application\\UseCases\\ConfirmarPresencaUseCase.cs",
               "RelativeDocumentMoniker": "src\\KS.Scheduler.Application\\UseCases\\ConfirmarPresencaUseCase.cs",
               "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Application\\UseCases\\ConfirmarPresencaUseCase.cs",
               "RelativeToolTip": "src\\KS.Scheduler.Application\\UseCases\\ConfirmarPresencaUseCase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-06T00:10:56.739Z",
               "EditorCaption": ""
@@ -45,7 +130,7 @@
               "RelativeDocumentMoniker": "src\\KS.Scheduler.API\\Controllers\\PartidasController.cs",
               "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\Controllers\\PartidasController.cs",
               "RelativeToolTip": "src\\KS.Scheduler.API\\Controllers\\PartidasController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBgAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowDEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-05T23:56:25.459Z",
               "EditorCaption": ""
