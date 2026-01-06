@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "KS.Scheduler.Api.Controllers.PartidasController",
+    "Method": "ObterPartida",
+    "RelativePath": "api/Partidas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KS.Scheduler.Api.Controllers.PartidasController",
     "Method": "CancelarPresenca",
     "RelativePath": "api/Partidas/cancelar-presenca",
     "HttpMethod": "DELETE",

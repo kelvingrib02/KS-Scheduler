@@ -1,0 +1,71 @@
+﻿@page "/login"
+@layout Layout.EmptyLayout
+@inject NavigationManager NavManager
+
+<div class="d-flex align-items-center justify-content-center min-vh-100 bg-light">
+    <div class="card border-0 shadow-lg p-4" style="max-width: 400px; width: 100%; border-radius: 15px;">
+        <div class="card-body">
+            <div class="text-center mb-4">
+                <div class="bg-primary text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 60px; height: 60px; font-size: 24px;">
+                    ⚽
+                </div>
+                <h4 class="fw-bold">Bem-vindo de volta!</h4>
+                <p class="text-muted small">Faça login para gerenciar suas partidas.</p>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-muted small fw-bold">E-MAIL</label>
+                <input type="email" class="form-control form-control-lg bg-light border-0" placeholder="seu@email.com" @bind="email" />
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label text-muted small fw-bold">SENHA</label>
+                <input type="password" class="form-control form-control-lg bg-light border-0" placeholder="••••••••" @bind="senha" />
+            </div>
+
+            @if (!string.IsNullOrEmpty(erro))
+            {
+                <div class="alert alert-danger py-2 small text-center rounded-3">
+                    @erro
+                </div>
+            }
+
+            <button class="btn btn-primary btn-lg w-100 rounded-pill fw-bold shadow-sm mb-3" @onclick="FazerLogin">
+                ENTRAR
+            </button>
+
+            <div class="text-center">
+                <a href="/" class="text-decoration-none small text-muted">Voltar para a Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string email = "";
+    private string senha = "";
+    private string erro = "";
+
+    private void FazerLogin()
+    {
+        // SIMULAÇÃO DE LOGIN (Pés no chão: MVP)
+        // Em produção, isso bateria na API para pegar um Token JWT
+
+        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(senha))
+        {
+            erro = "Preencha todos os campos.";
+            return;
+        }
+
+        // Senha padrão hardcoded para testes
+        if (senha == "admin123")
+        {
+            // Login sucesso -> Vai para a tela da partida
+            NavManager.NavigateTo("/app");
+        }
+        else
+        {
+            erro = "Credenciais inválidas. Tente senha: admin123";
+        }
+    }
+}

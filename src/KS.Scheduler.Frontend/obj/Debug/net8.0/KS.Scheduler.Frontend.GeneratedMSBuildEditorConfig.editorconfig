@@ -30,8 +30,20 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/55129/Documents/Projetos/KS-Scheduler/src/KS.Scheduler.Frontend/Layout/EmptyLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEVtcHR5TGF5b3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/55129/Documents/Projetos/KS-Scheduler/src/KS.Scheduler.Frontend/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/55129/Documents/Projetos/KS-Scheduler/src/KS.Scheduler.Frontend/Pages/Landing.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFuZGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/55129/Documents/Projetos/KS-Scheduler/src/KS.Scheduler.Frontend/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/55129/Documents/Projetos/KS-Scheduler/src/KS.Scheduler.Frontend/Pages/NotFound.razor]

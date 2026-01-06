@@ -98,6 +98,29 @@
         }
       }
     },
+    "/api/Partidas/{id}": {
+      "get": {
+        "tags": [
+          "Partidas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Presenca": {
       "post": {
         "tags": [

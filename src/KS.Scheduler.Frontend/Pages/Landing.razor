@@ -1,0 +1,285 @@
+﻿@page "/"
+@inject NavigationManager NavManager
+@layout Layout.EmptyLayout
+
+<PageTitle>KS Scheduler</PageTitle>
+
+<div class="recta-style-container">
+
+    <nav class="navbar-custom">
+        <div class="logo">
+            <span class="logo-icon">⚽</span> KS Scheduler
+        </div>
+        <div class="nav-links">
+            <button class="btn-login" @onclick='() => NavManager.NavigateTo("/login")'>Entrar</button>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Gerencie seu futebol <br />
+                <span class="text-gradient">como um profissional.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Organize partidas, controle pagamentos e confirme presenças em segundos.
+                Sem planilha, sem confusão, apenas jogo.
+            </p>
+
+            <div class="cta-group">
+                <button class="btn-primary-glow" @onclick='() => NavManager.NavigateTo("/login")'>
+                    Criar minha conta grátis
+                </button>
+                <button class="btn-secondary" @onclick='() => NavManager.NavigateTo("/app")'>
+                    Ver demonstração
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="features-grid">
+        <div class="glass-card">
+            <div class="icon">📅</div>
+            <h3>Agendamento Fácil</h3>
+            <p>Defina data, hora e local. O link mágico faz o resto pelo seu grupo.</p>
+        </div>
+        <div class="glass-card">
+            <div class="icon">✅</div>
+            <h3>Lista Automática</h3>
+            <p>Quem paga, joga. Controle quem confirmou e quem está na fila de espera.</p>
+        </div>
+        <div class="glass-card">
+            <div class="icon">💰</div>
+            <h3>Controle Financeiro</h3>
+            <p>Saiba exatamente quem pagou e quem está devendo.</p>
+        </div>
+    </section>
+
+    <footer class="simple-footer">
+        <p>© 2026 KS Scheduler. Todos os direitos reservados.</p>
+    </footer>
+
+</div>
+
+<style>
+    .recta-style-container {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #0B0E14;
+        background-image: radial-gradient(circle at 50% 0%, #1a2e26 0%, #0B0E14 60%);
+        color: #ffffff;
+        min-height: 100vh;
+        width: 100%;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-custom {
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .logo {
+        font-weight: 700;
+        font-size: 1.2rem;
+        letter-spacing: -0.5px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-login {
+        background: transparent;
+        border: 1px solid rgba(255,255,255,0.2);
+        color: white;
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+        .btn-login:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+        }
+
+    .hero-section {
+        text-align: center;
+        padding: 80px 20px 60px;
+        max-width: 800px;
+        animation: fadeInUp 0.8s ease-out;
+    }
+
+    .badge-new {
+        display: inline-block;
+        background: rgba(16, 185, 129, 0.1);
+        color: #34d399;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        margin-bottom: 24px;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        line-height: 1.1;
+        font-weight: 800;
+        margin-bottom: 24px;
+        letter-spacing: -1px;
+    }
+
+    .text-gradient {
+        background: linear-gradient(90deg, #34d399 0%, #6ee7b7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+        color: #94a3b8;
+        line-height: 1.6;
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-group {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn-primary-glow {
+        background-color: #10b981;
+        color: #022c22;
+        font-weight: 700;
+        padding: 14px 32px;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+    }
+
+        .btn-primary-glow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.6);
+            background-color: #34d399;
+        }
+
+    .btn-secondary {
+        background: rgba(255,255,255,0.05);
+        color: white;
+        font-weight: 600;
+        padding: 14px 32px;
+        border-radius: 50px;
+        border: 1px solid rgba(255,255,255,0.1);
+        cursor: pointer;
+        font-size: 1rem;
+        transition: all 0.2s;
+    }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        max-width: 1000px;
+        width: 100%;
+        padding: 40px 24px;
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 30px;
+        transition: transform 0.3s, background 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .glass-card .icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            background: rgba(255,255,255,0.1);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+
+        .glass-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .glass-card p {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+    .simple-footer {
+        margin-top: auto;
+        padding: 40px;
+        color: #475569;
+        font-size: 0.8rem;
+    }
+
+    @@keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .hero-title {
+            font-size: 2.5rem;
+        }
+
+        .hero-content {
+            padding-top: 40px;
+        }
+
+        .cta-group {
+            flex-direction: column;
+        }
+
+        .btn-primary-glow, .btn-secondary {
+            width: 100%;
+        }
+    }
+</style>
