@@ -20,6 +20,7 @@ builder.Services.AddScoped<IPresencaRepository, PresencaRepository>();
 
 builder.Services.AddScoped<CriarPartidaUseCase>();
 builder.Services.AddScoped<ConfirmarPresencaUseCase>();
+builder.Services.AddScoped<CancelarPresencaUseCase>();
 
 var app = builder.Build();
 

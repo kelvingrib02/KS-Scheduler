@@ -1,0 +1,176 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "KS.Scheduler.API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Partidas/confirmar-presenca": {
+      "post": {
+        "tags": [
+          "Partidas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmarPresencaInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmarPresencaInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmarPresencaInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Partidas": {
+      "post": {
+        "tags": [
+          "Partidas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarPartidaInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarPartidaInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarPartidaInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Presenca": {
+      "post": {
+        "tags": [
+          "Presenca"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmarPresencaInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmarPresencaInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmarPresencaInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ConfirmarPresencaInput": {
+        "type": "object",
+        "properties": {
+          "partidaId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "nomeJogador": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefoneJogador": {
+            "type": "string",
+            "nullable": true
+          },
+          "posicao": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CriarPartidaInput": {
+        "type": "object",
+        "properties": {
+          "dataHora": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "local": {
+            "type": "string",
+            "nullable": true
+          },
+          "valorTotal": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorPorPessoa": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "maximoJogadores": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoJogo": {
+            "$ref": "#/components/schemas/TipoJogo"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TipoJogo": {
+        "enum": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Partidas"
+    },
+    {
+      "name": "Presenca"
+    }
+  ]
+}

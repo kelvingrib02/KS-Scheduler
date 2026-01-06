@@ -3,67 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.infrastructure\\ks.scheduler.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|solutionrelative:src\\ks.scheduler.infrastructure\\ks.scheduler.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{835711E5-8036-4456-8CC7-F9A3EF76C557}|src\\KS.Scheduler.API\\KS.Scheduler.API.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.api\\controllers\\partidascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{835711E5-8036-4456-8CC7-F9A3EF76C557}|src\\KS.Scheduler.API\\KS.Scheduler.API.csproj|solutionrelative:src\\ks.scheduler.api\\controllers\\partidascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{835711E5-8036-4456-8CC7-F9A3EF76C557}|src\\KS.Scheduler.API\\KS.Scheduler.API.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{835711E5-8036-4456-8CC7-F9A3EF76C557}|src\\KS.Scheduler.API\\KS.Scheduler.API.csproj|solutionrelative:src\\ks.scheduler.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.infrastructure\\repositories\\presencarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|solutionrelative:src\\ks.scheduler.infrastructure\\repositories\\presencarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.infrastructure\\repositories\\partidarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|solutionrelative:src\\ks.scheduler.infrastructure\\repositories\\partidarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|solutionrelative:src\\ks.scheduler.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.infrastructure\\persistence\\mappings\\jogadormap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|solutionrelative:src\\ks.scheduler.infrastructure\\persistence\\mappings\\jogadormap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.infrastructure\\persistence\\ksschedulerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|solutionrelative:src\\ks.scheduler.infrastructure\\persistence\\ksschedulerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.infrastructure\\persistence\\mappings\\partidamap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|solutionrelative:src\\ks.scheduler.infrastructure\\persistence\\mappings\\partidamap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.infrastructure\\repositories\\jogadorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|solutionrelative:src\\ks.scheduler.infrastructure\\repositories\\jogadorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.infrastructure\\persistence\\mappings\\presencamap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|solutionrelative:src\\ks.scheduler.infrastructure\\persistence\\mappings\\presencamap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|solutionrelative:src\\ks.scheduler.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{835711E5-8036-4456-8CC7-F9A3EF76C557}|src\\KS.Scheduler.API\\KS.Scheduler.API.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.api\\ks.scheduler.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{835711E5-8036-4456-8CC7-F9A3EF76C557}|src\\KS.Scheduler.API\\KS.Scheduler.API.csproj|solutionrelative:src\\ks.scheduler.api\\ks.scheduler.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49F19D9E-C65A-4557-A299-7739F96FBD44}|src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.application\\ks.scheduler.application.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{49F19D9E-C65A-4557-A299-7739F96FBD44}|src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj|solutionrelative:src\\ks.scheduler.application\\ks.scheduler.application.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A626BBF9-2264-4669-9BE2-EE58FE913867}|src\\KS.Scheduler.Domain\\KS.Scheduler.Domain.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.domain\\ks.scheduler.domain.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{A626BBF9-2264-4669-9BE2-EE58FE913867}|src\\KS.Scheduler.Domain\\KS.Scheduler.Domain.csproj|solutionrelative:src\\ks.scheduler.domain\\ks.scheduler.domain.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.infrastructure\\ks.scheduler.infrastructure.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{D72C2DAF-E469-43AB-B158-151D8639CAA7}|src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj|solutionrelative:src\\ks.scheduler.infrastructure\\ks.scheduler.infrastructure.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{49F19D9E-C65A-4557-A299-7739F96FBD44}|src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.application\\usecases\\confirmarpresencausecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49F19D9E-C65A-4557-A299-7739F96FBD44}|src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj|solutionrelative:src\\ks.scheduler.application\\usecases\\confirmarpresencausecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -73,215 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\Program.cs",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.API\\Program.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\Program.cs",
-              "RelativeToolTip": "src\\KS.Scheduler.API\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T21:35:45.337Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Repositories\\Repository.cs",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.Infrastructure\\Repositories\\Repository.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Repositories\\Repository.cs",
-              "RelativeToolTip": "src\\KS.Scheduler.Infrastructure\\Repositories\\Repository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T21:28:02.663Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "KSSchedulerDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Persistence\\KSSchedulerDbContext.cs",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.Infrastructure\\Persistence\\KSSchedulerDbContext.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Persistence\\KSSchedulerDbContext.cs",
-              "RelativeToolTip": "src\\KS.Scheduler.Infrastructure\\Persistence\\KSSchedulerDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T21:27:54.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "JogadorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Repositories\\JogadorRepository.cs",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.Infrastructure\\Repositories\\JogadorRepository.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Repositories\\JogadorRepository.cs",
-              "RelativeToolTip": "src\\KS.Scheduler.Infrastructure\\Repositories\\JogadorRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T21:27:49.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "JogadorMap.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Persistence\\Mappings\\JogadorMap.cs",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.Infrastructure\\Persistence\\Mappings\\JogadorMap.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Persistence\\Mappings\\JogadorMap.cs",
-              "RelativeToolTip": "src\\KS.Scheduler.Infrastructure\\Persistence\\Mappings\\JogadorMap.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T21:27:48.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PresencaMap.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Persistence\\Mappings\\PresencaMap.cs",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.Infrastructure\\Persistence\\Mappings\\PresencaMap.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Persistence\\Mappings\\PresencaMap.cs",
-              "RelativeToolTip": "src\\KS.Scheduler.Infrastructure\\Persistence\\Mappings\\PresencaMap.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T21:27:47.447Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PartidaMap.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Persistence\\Mappings\\PartidaMap.cs",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.Infrastructure\\Persistence\\Mappings\\PartidaMap.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Persistence\\Mappings\\PartidaMap.cs",
-              "RelativeToolTip": "src\\KS.Scheduler.Infrastructure\\Persistence\\Mappings\\PartidaMap.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T21:27:46.794Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.Infrastructure\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\DependencyInjection.cs",
-              "RelativeToolTip": "src\\KS.Scheduler.Infrastructure\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T21:27:44.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PresencaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Repositories\\PresencaRepository.cs",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.Infrastructure\\Repositories\\PresencaRepository.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Repositories\\PresencaRepository.cs",
-              "RelativeToolTip": "src\\KS.Scheduler.Infrastructure\\Repositories\\PresencaRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T21:27:41.889Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PartidaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Repositories\\PartidaRepository.cs",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.Infrastructure\\Repositories\\PartidaRepository.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Repositories\\PartidaRepository.cs",
-              "RelativeToolTip": "src\\KS.Scheduler.Infrastructure\\Repositories\\PartidaRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T21:27:39.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAFAHAAAAAAAAAAAnwGAHAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-01-05T21:27:28.74Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "KS.Scheduler.API",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\KS.Scheduler.API.csproj",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.API\\KS.Scheduler.API.csproj",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\KS.Scheduler.API.csproj",
-              "RelativeToolTip": "src\\KS.Scheduler.API\\KS.Scheduler.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-05T21:24:27.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "KS.Scheduler.Application",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj",
-              "RelativeToolTip": "src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-05T21:24:15.278Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "KS.Scheduler.Infrastructure",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj",
-              "RelativeToolTip": "src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-05T21:22:25.964Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "KS.Scheduler.Infrastructure",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj",
-              "RelativeToolTip": "src\\KS.Scheduler.Infrastructure\\KS.Scheduler.Infrastructure.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-05T21:23:48.351Z",
+              "DocumentIndex": 1,
+              "Title": "ConfirmarPresencaUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Application\\UseCases\\ConfirmarPresencaUseCase.cs",
+              "RelativeDocumentMoniker": "src\\KS.Scheduler.Application\\UseCases\\ConfirmarPresencaUseCase.cs",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Application\\UseCases\\ConfirmarPresencaUseCase.cs",
+              "RelativeToolTip": "src\\KS.Scheduler.Application\\UseCases\\ConfirmarPresencaUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T00:10:56.739Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "KS.Scheduler.Domain",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Domain\\KS.Scheduler.Domain.csproj",
-              "RelativeDocumentMoniker": "src\\KS.Scheduler.Domain\\KS.Scheduler.Domain.csproj",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Domain\\KS.Scheduler.Domain.csproj",
-              "RelativeToolTip": "src\\KS.Scheduler.Domain\\KS.Scheduler.Domain.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-05T21:23:27.98Z",
+              "DocumentIndex": 0,
+              "Title": "PartidasController.cs",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\Controllers\\PartidasController.cs",
+              "RelativeDocumentMoniker": "src\\KS.Scheduler.API\\Controllers\\PartidasController.cs",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\Controllers\\PartidasController.cs",
+              "RelativeToolTip": "src\\KS.Scheduler.API\\Controllers\\PartidasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBgAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T23:56:25.459Z",
               "EditorCaption": ""
             }
           ]

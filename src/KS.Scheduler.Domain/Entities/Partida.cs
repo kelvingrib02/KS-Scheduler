@@ -45,5 +45,16 @@ namespace KS.Scheduler.Domain.Entities
                 ValorPorPessoa = ValorTotal / totalConfirmados;
             }
         }
+        public void RemoverJogador(Guid jogadorId)
+        {
+            var presenca = Presencas.FirstOrDefault(p => p.JogadorId == jogadorId);
+
+            if (presenca == null)
+            {
+                return;
+            }
+
+            Presencas.Remove(presenca);
+        }
     }
 }

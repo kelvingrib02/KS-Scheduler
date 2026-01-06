@@ -1,0 +1,50 @@
+[
+  {
+    "ContainingType": "KS.Scheduler.Api.Controllers.PartidasController",
+    "Method": "CriarPartida",
+    "RelativePath": "api/Partidas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "KS.Scheduler.Application.DTOs.CriarPartidaInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KS.Scheduler.Api.Controllers.PartidasController",
+    "Method": "ConfirmarPresenca",
+    "RelativePath": "api/Partidas/confirmar-presenca",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "KS.Scheduler.Application.DTOs.ConfirmarPresencaInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KS.Scheduler.Api.Controllers.PresencaController",
+    "Method": "Confirmar",
+    "RelativePath": "api/Presenca",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "KS.Scheduler.Application.DTOs.ConfirmarPresencaInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -25,7 +25,6 @@ namespace KS.Scheduler.Infrastructure.Migrations
             modelBuilder.Entity("KS.Scheduler.Domain.Entities.Jogador", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("DataCriacao")
@@ -36,7 +35,7 @@ namespace KS.Scheduler.Infrastructure.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Posicao")
                         .IsRequired()
@@ -44,7 +43,8 @@ namespace KS.Scheduler.Infrastructure.Migrations
 
                     b.Property<string>("Telefone")
                         .IsRequired()
-                        .HasColumnType("varchar(20)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Id");
 
@@ -54,7 +54,6 @@ namespace KS.Scheduler.Infrastructure.Migrations
             modelBuilder.Entity("KS.Scheduler.Domain.Entities.Partida", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("DataCriacao")
@@ -65,7 +64,7 @@ namespace KS.Scheduler.Infrastructure.Migrations
 
                     b.Property<string>("Local")
                         .IsRequired()
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MaximoJogadores")
                         .HasColumnType("int");
@@ -87,7 +86,6 @@ namespace KS.Scheduler.Infrastructure.Migrations
             modelBuilder.Entity("KS.Scheduler.Domain.Entities.Presenca", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("DataConfirmacao")
@@ -109,8 +107,7 @@ namespace KS.Scheduler.Infrastructure.Migrations
 
                     b.HasIndex("JogadorId");
 
-                    b.HasIndex("PartidaId", "JogadorId")
-                        .IsUnique();
+                    b.HasIndex("PartidaId");
 
                     b.ToTable("Presencas");
                 });

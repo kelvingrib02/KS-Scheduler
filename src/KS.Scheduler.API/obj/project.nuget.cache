@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n0Cj5sFkXaA=",
+  "dgSpecHash": "Hwv4Wmf29+o=",
   "success": true,
-  "projectFilePath": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\KS.Scheduler.API.csproj",
+  "projectFilePath": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Api\\KS.Scheduler.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\55129\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\55129\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -11,10 +11,13 @@ namespace KS.Scheduler.Api.Controllers
     public class PartidasController : ControllerBase
     {
         private readonly ConfirmarPresencaUseCase _confirmarPresencaUseCase;
-
-        public PartidasController(ConfirmarPresencaUseCase confirmarPresencaUseCase)
+        private readonly CancelarPresencaUseCase _cancelarPresencaUseCase;
+        public PartidasController(
+            ConfirmarPresencaUseCase confirmarPresencaUseCase,
+            CancelarPresencaUseCase cancelarPresencaUseCase)
         {
             _confirmarPresencaUseCase = confirmarPresencaUseCase;
+            _cancelarPresencaUseCase = cancelarPresencaUseCase;
         }
 
         [HttpPost("confirmar-presenca")]
@@ -52,6 +55,20 @@ namespace KS.Scheduler.Api.Controllers
             catch (Exception ex)
             {
                 return BadRequest(new { sucesso = false, erro = ex.Message });
+            }
+        }
+
+        [HttpDelete("cancelar-presenca")]
+        public async Task<IActionResult> CancelarPresenca([FromBody] CancelarPresencaInput input)
+        {
+            try
+            {
+                await _cancelarPresencaUseCase.Execute(input);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { erro = ex.Message });
             }
         }
     }

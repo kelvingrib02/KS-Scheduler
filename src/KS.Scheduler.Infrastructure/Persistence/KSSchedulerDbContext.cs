@@ -1,12 +1,13 @@
 ﻿using KS.Scheduler.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 
 namespace KS.Scheduler.Infrastructure.Persistence
 {
     public class KSSchedulerDbContext : DbContext
     {
-        public KSSchedulerDbContext(DbContextOptions<KSSchedulerDbContext> options) : base(options) { }
+        public KSSchedulerDbContext(DbContextOptions<KSSchedulerDbContext> options) : base(options)
+        {
+        }
 
         public DbSet<Partida> Partidas { get; set; }
         public DbSet<Jogador> Jogadores { get; set; }
@@ -14,9 +15,31 @@ namespace KS.Scheduler.Infrastructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Partida>(e =>
+            {
+                e.HasKey(p => p.Id);
+                e.Property(p => p.Id).ValueGeneratedNever();
+
+                e.Property(p => p.ValorTotal).HasColumnType("decimal(18,2)");
+                e.Property(p => p.ValorPorPessoa).HasColumnType("decimal(18,2)");
+
+                e.HasMany(p => p.Presencas).WithOne(pr => pr.Partida).HasForeignKey(pr => pr.PartidaId);
+            });
+
+            modelBuilder.Entity<Presenca>(e =>
+            {
+                e.HasKey(p => p.Id);
+                e.Property(p => p.Id).ValueGeneratedNever();
+            });
+
+            modelBuilder.Entity<Jogador>(e =>
+            {
+                e.HasKey(p => p.Id);
+                e.Property(p => p.Id).ValueGeneratedNever();
+                e.Property(p => p.Telefone).HasMaxLength(20);
+            });
         }
     }
 }
