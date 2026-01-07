@@ -1,52 +1,66 @@
-﻿<div class="sidebar-container h-100 d-flex flex-column">
+﻿@inject NavigationManager NavManager
 
-    <!-- Logo do App -->
+<div class="sidebar-container h-100 d-flex flex-column">
+
     <div class="logo-section p-4">
         <div class="fw-bold text-white fs-4">KS <span class="text-gradient">Scheduler</span></div>
-        <small class="text-muted" style="font-size: 0.75rem;">Painel do Técnico</small>
     </div>
 
-    <!-- Itens do Menu -->
-    <nav class="flex-column nav-pills px-2">
+    <div class="border-top border-secondary border-opacity-25">
+        <nav class="flex-column nav-pills px-2 mt-auto p-4">
+            <NavLink class="nav-link d-flex align-items-center mb-2" href="app" Match="NavLinkMatch.All">
+                <span class="icon-box me-3">🏟️</span>
+                <span class="fw-bold">Resumo do Jogo</span>
+            </NavLink>
 
-        <NavLink class="nav-link d-flex align-items-center mb-2" href="app" Match="NavLinkMatch.All">
-            <span class="icon-box me-3">🏟️</span>
-            <span class="fw-bold">Resumo do Jogo</span>
-        </NavLink>
+            <NavLink class="nav-link d-flex align-items-center mb-2" href="historico">
+                <span class="icon-box me-3">📜</span>
+                <span class="fw-bold">Histórico</span>
+            </NavLink>
 
-        <NavLink class="nav-link d-flex align-items-center mb-2" href="historico">
-            <span class="icon-box me-3">📜</span>
-            <span class="fw-bold">Histórico</span>
-        </NavLink>
+            <NavLink class="nav-link d-flex align-items-center mb-2" href="financeiro">
+                <span class="icon-box me-3">💰</span>
+                <span class="fw-bold">Financeiro</span>
+            </NavLink>
 
-        <NavLink class="nav-link d-flex align-items-center mb-2" href="financeiro">
-            <span class="icon-box me-3">💰</span>
-            <span class="fw-bold">Financeiro</span>
-        </NavLink>
+            <NavLink class="nav-link d-flex align-items-center mb-2" href="estatisticas">
+                <span class="icon-box me-3">📊</span>
+                <span class="fw-bold">Estatísticas</span>
+            </NavLink>
+        </nav>
+    </div>
 
-        <NavLink class="nav-link d-flex align-items-center mb-2" href="estatisticas">
-            <span class="icon-box me-3">📊</span>
-            <span class="fw-bold">Estatísticas</span>
-        </NavLink>
-
-    </nav>
-
-    <!-- Rodapé do Menu -->
     <div class="mt-auto p-4 border-top border-secondary border-opacity-25">
-        <div class="d-flex align-items-center text-white-50">
-            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center me-2"
-                 style="width: 32px; height: 32px; font-size: 0.8rem;">
+        <div class="d-flex align-items-center mb-3">
+            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center me-3 text-white fw-bold"
+                 style="width: 40px; height: 40px; font-size: 0.9rem;">
                 KR
             </div>
-            <small>Kelvin Ribeiro</small>
+            <div class="d-flex flex-column">
+                <span class="text-white fw-bold" style="font-size: 0.9rem;">Kelvin Ribeiro</span>
+                <small class="text-white" style="font-size: 0.75rem;">kelvin@email.com</small>
+            </div>
         </div>
+
+        <button class="btn w-100 btn-logout" @onclick="Logout">
+            Sair do sistema
+        </button>
+
     </div>
 </div>
 
+@code {
+    [Parameter] public EventCallback OnLinkClick { get; set; }
+
+    private void Logout()
+    {
+        NavManager.NavigateTo("/");
+    }
+}
+
 <style>
-    /* Estilo Específico do Menu */
     .sidebar-container {
-        background-color: #1e293b; /* Cinza azulado escuro */
+        background-color: #1e293b;
         border-right: 1px solid rgba(255,255,255,0.05);
     }
 
@@ -57,7 +71,7 @@
     }
 
     .nav-link {
-        color: #94a3b8; /* Cinza claro */
+        color: #94a3b8;
         padding: 0.8rem 1rem;
         border-radius: 12px;
         transition: all 0.2s ease;
@@ -71,7 +85,7 @@
 
         .nav-link.active {
             background: linear-gradient(90deg, rgba(16, 185, 129, 0.1) 0%, transparent 100%);
-            color: #10b981; /* Verde Emerald */
+            color: #10b981;
             border-left: 3px solid #10b981;
         }
 
@@ -85,4 +99,21 @@
     .nav-link:hover .icon-box {
         filter: grayscale(0%);
     }
+
+    .btn-logout {
+        background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+        color: white;
+        border: none;
+        padding: 0.5rem;
+        font-weight: bold;
+        border-radius: 12px;
+        transition: transform 0.2s;
+        box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+    }
+
+        .btn-logout:hover {
+            transform: translateY(-2px);
+            color: white;
+            box-shadow: 0 15px 25px -5px rgba(16, 185, 129, 0.4);
+        }
 </style>
