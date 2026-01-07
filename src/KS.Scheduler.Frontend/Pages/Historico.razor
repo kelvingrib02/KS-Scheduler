@@ -1,0 +1,46 @@
+﻿@page "/historico"
+@inject HttpClient Http
+
+<PageTitle>Financeiro</PageTitle>
+
+<!-- 1. O IF MÁGICO: Se for null, mostra spinner e NÃO renderiza o resto -->
+@if (dadosCarregados == null)
+{
+    <div class="d-flex justify-content-center align-items-center" style="height: 60vh;">
+        <div class="spinner-border text-success" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Carregando...</span>
+        </div>
+        <div class="ms-3 text-success fw-bold">Calculando os gastos...</div>
+    </div>
+}
+else
+{
+    <!-- 2. O CONTEÚDO REAL (Só aparece depois que os dados chegam) -->
+    <div class="container-fluid animate-fade-in">
+        <h3 class="fw-bold mb-4">Controle Financeiro 💰</h3>
+
+        <div class="alert alert-success bg-opacity-10 border-success text-white">
+            Aqui vai aparecer sua lista de pagamentos.
+        </div>
+
+        <!-- Exemplo de card escuro pra não ficar branco -->
+        <div class="card bg-dark border-secondary p-4">
+            <h5>Resumo do Caixa</h5>
+            <p>Saldo: R$ 0,00</p>
+        </div>
+    </div>
+}
+
+@code {
+    private bool dadosCarregados = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Simula o delay da API (remove isso qnd tiver a API real)
+        await Task.Delay(1500);
+
+        // Aqui você chamaria: var dados = await Http.GetFromJsonAsync(...)
+
+        dadosCarregados = true; // Libera a tela
+    }
+}

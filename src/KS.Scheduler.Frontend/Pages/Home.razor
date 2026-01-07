@@ -1,149 +1,218 @@
 ﻿@page "/app"
 @using KS.Scheduler.Frontend.Models
 @inject HttpClient Http
-@inject NavigationManager NavManager
 
-<PageTitle>KS Scheduler - Próxima Partida</PageTitle>
+<PageTitle>Painel - KS Scheduler</PageTitle>
 
-<div class="container-fluid p-0" style="max-width: 600px; margin: auto;">
-
-    <!-- Título do App -->
-    <div class="text-center my-4">
-        <h3 class="fw-bold text-primary">⚽ KS Scheduler</h3>
-        <p class="text-muted">Gerencie seu futebol sem estresse</p>
+<!-- BLOCO DE LOADING (AQUI É O SEGREDO DO FLASH BRANCO) -->
+@if (partida == null)
+{
+    <div class="d-flex flex-column align-items-center justify-content-center" style="height: 70vh;">
+        <div class="spinner-border text-success" role="status"></div>
+        <p class="mt-3 text-muted">Buscando informações do jogo...</p>
     </div>
+}
+else
+{
+    <!-- CONTEÚDO REAL (Só aparece quando os dados chegam) -->
+    <div class="container-fluid p-0">
 
-    @if (partida == null)
-    {
-        <div class="text-center mt-5">
-            <div class="spinner-border text-primary" role="status">
-                <span class="visually-hidden">Carregando...</span>
-            </div>
-            <p class="mt-2">Buscando a partida...</p>
-        </div>
-    }
-    else
-    {
-        <!-- Card Principal da Partida -->
-        <div class="card shadow-sm border-0 mb-4 rounded-3 overflow-hidden">
-            <div class="card-header bg-primary text-white text-center py-3">
-                <h5 class="mb-0 fw-bold">Próximo Jogo</h5>
-            </div>
-            <div class="card-body">
-                <div class="row text-center mb-3">
-                    <div class="col-6 border-end">
-                        <small class="text-muted d-block">DATA</small>
-                        <strong>@partida.DataHora.ToString("dd/MM")</strong> <span class="text-muted">(@partida.DataHora.ToString("ddd"))</span>
-                    </div>
-                    <div class="col-6">
-                        <small class="text-muted d-block">HORÁRIO</small>
-                        <strong>@partida.DataHora.ToString("HH:mm")</strong>
+        <!-- Cabeçalho com o Resumo -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="fw-bold mb-1">Próxima Partida ⚽</h2>
+                <p class="text-muted">@partida.DataHora.ToString("dd/MM/yyyy") às @partida.DataHora.ToString("HH:mm") • @partida.Local</p>
+
+                <!-- Barra de Progresso Bonita -->
+                <div class="progress mt-3 bg-secondary bg-opacity-25" style="height: 10px; border-radius: 10px;">
+                    <div class="progress-bar bg-gradient-success" role="progressbar"
+                         style="width: @(CalcularPorcentagem())%; border-radius: 10px;">
                     </div>
                 </div>
-
-                <hr class="text-muted opacity-25">
-
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <span>📍 <strong>Local:</strong></span>
-                    <span class="text-end">@partida.Local</span>
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <span>💰 <strong>Valor:</strong></span>
-                    <span class="badge bg-success fs-6">R$ @partida.ValorPorPessoa.ToString("F2")</span>
+                <div class="d-flex justify-content-between mt-2 text-small text-muted">
+                    <span>@partida.Presencas.Count(x => x.Confirmado) Confirmados</span>
+                    <span>Meta: @partida.MaximoJogadores</span>
                 </div>
             </div>
         </div>
 
-        <!-- Status e Barra de Progresso -->
-        <div class="mb-4 px-2">
-            <div class="d-flex justify-content-between mb-1">
-                <span class="fw-bold text-secondary">Jogadores Confirmados</span>
-                <span class="fw-bold @(partida.Presencas.Count >= partida.MaximoJogadores ? "text-danger" : "text-primary")">
-                    @partida.Presencas.Count / @partida.MaximoJogadores
-                </span>
-            </div>
-            <div class="progress" style="height: 10px;">
-                <div class="progress-bar @(partida.Presencas.Count >= partida.MaximoJogadores ? "bg-danger" : "bg-primary")"
-                     role="progressbar"
-                     style="width: @(CalcularPorcentagem())%"
-                     aria-valuenow="@partida.Presencas.Count"
-                     aria-valuemin="0"
-                     aria-valuemax="@partida.MaximoJogadores">
-                </div>
-            </div>
-        </div>
+        <!-- AS 3 LISTAS DE PARTICIPANTES -->
+        <div class="row g-4">
 
-        <!-- Botão de Ação -->
-        <div class="d-grid gap-2 mb-4">
-            <button class="btn btn-primary btn-lg rounded-pill shadow-sm fw-bold py-3" @onclick="AbrirModalConfirmacao">
-                ✅ QUERO JOGAR
-            </button>
-        </div>
-
-        <!-- Lista de Jogadores -->
-        <div class="card border-0 shadow-sm rounded-3">
-            <div class="card-header bg-light fw-bold text-secondary">
-                Lista de Convocados
-            </div>
-            <ul class="list-group list-group-flush">
-                @if (partida.Presencas.Any())
-                {
-                    @foreach (var presenca in partida.Presencas)
-                    {
-                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
-                            <div class="d-flex align-items-center">
-                                <div class="bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center me-3"
-                                     style="width: 40px; height: 40px; font-weight: bold;">
-                                    @presenca.Nome.Substring(0, 1).ToUpper()
-                                </div>
+            <!-- 1. JOGADORES CONFIRMADOS (Verde) -->
+            <div class="col-md-4">
+                <div class="card-custom border-top-success">
+                    <h5 class="fw-bold text-success mb-3">✅ Confirmados</h5>
+                    <div class="player-list">
+                        @foreach (var p in ObterConfirmados())
+                        {
+                            <div class="player-item">
+                                <span class="avatar bg-success">@p.Nome.Substring(0, 1)</span>
                                 <div>
-                                    <h6 class="mb-0 fw-bold">@presenca.Nome</h6>
-                                    <small class="text-muted">@presenca.Posicao</small>
+                                    <div class="fw-bold">@p.Nome</div>
+                                    <small class="text-success-dim">@p.Posicao</small>
                                 </div>
                             </div>
-                            <button class="btn btn-sm btn-outline-danger border-0" title="Cancelar">
-                                🗑️
-                            </button>
-                        </li>
-                    }
-                }
-                else
-                {
-                    <li class="list-group-item text-center text-muted py-4">
-                        Ninguém confirmou ainda. Seja o primeiro! 🥇
-                    </li>
-                }
-            </ul>
+                        }
+                        @if (!ObterConfirmados().Any())
+                        {
+                            <small class="text-muted">Ninguém ainda.</small>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. PENDENTES DE CONFIRMAÇÃO (Amarelo) -->
+            <div class="col-md-4">
+                <div class="card-custom border-top-warning">
+                    <h5 class="fw-bold text-warning mb-3">⏳ Pendentes</h5>
+                    <div class="player-list">
+                        <!-- Simulando dados pois sua model atual talvez não tenha status 'Pendente' ainda -->
+                        <div class="player-item opacity-50">
+                            <span class="avatar bg-warning text-dark">?</span>
+                            <div>
+                                <div class="fw-bold">Lista de Espera</div>
+                                <small class="text-muted">Aguardando convite...</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. DEVEDORES / PAGAMENTO PENDENTE (Vermelho) -->
+            <div class="col-md-4">
+                <div class="card-custom border-top-danger">
+                    <h5 class="fw-bold text-danger mb-3">💸 Falta Pagar</h5>
+                    <div class="player-list">
+                        @foreach (var p in ObterConfirmados().Take(1)) // Exemplo: Pegando o primeiro como se devesse
+                        {
+                            <div class="player-item">
+                                <span class="avatar bg-danger">@p.Nome.Substring(0, 1)</span>
+                                <div class="w-100">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="fw-bold">@p.Nome</span>
+                                        <span class="text-danger fw-bold">R$ @partida.ValorPorPessoa</span>
+                                    </div>
+                                    <small class="text-danger-dim">Pix não identificado</small>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </div>
+}
+
+<style>
+    /* Estilos dos Cards da Dashboard */
+    .card-custom {
+        background-color: #1e293b;
+        border-radius: 16px;
+        padding: 1.5rem;
+        height: 100%;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-</div>
+
+    .border-top-success {
+        border-top: 4px solid #10b981;
+    }
+
+    .border-top-warning {
+        border-top: 4px solid #f59e0b;
+    }
+
+    .border-top-danger {
+        border-top: 4px solid #ef4444;
+    }
+
+    .player-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .player-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+        .player-item:last-child {
+            border-bottom: none;
+        }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+    }
+
+    .bg-gradient-success {
+        background: linear-gradient(90deg, #10b981, #34d399);
+    }
+
+    .text-success {
+        color: #10b981 !important;
+    }
+
+    .text-warning {
+        color: #f59e0b !important;
+    }
+
+    .text-danger {
+        color: #ef4444 !important;
+    }
+
+    .text-success-dim {
+        color: rgba(16, 185, 129, 0.7);
+        font-size: 0.85rem;
+    }
+
+    .text-danger-dim {
+        color: rgba(239, 68, 68, 0.7);
+        font-size: 0.85rem;
+    }
+</style>
 
 @code {
     private PartidaViewModel? partida;
-
     private string idPartidaTeste = "AED60E36-A9C6-4A8F-A8A5-CE82A6532700";
 
     protected override async Task OnInitializedAsync()
     {
+        // Simulação de delay para você ver o Spinner verde funcionando em vez da tela branca
+        await Task.Delay(1500);
+
         try
         {
+            // Se der erro na API, ele carrega o Fake pra não quebrar a tela
             partida = await Http.GetFromJsonAsync<PartidaViewModel>($"api/partidas/{idPartidaTeste}");
         }
-        catch (Exception ex)
+        catch
         {
-            Console.WriteLine($"Erro ao buscar partida: {ex.Message}");
+            CarregarDadosFakes();
         }
+    }
+
+    private IEnumerable<PresencaViewModel> ObterConfirmados()
+    {
+        if (partida == null) return new List<PresencaViewModel>();
+        return partida.Presencas.Where(x => x.Confirmado);
     }
 
     private double CalcularPorcentagem()
     {
         if (partida == null || partida.MaximoJogadores == 0) return 0;
         return (double)partida.Presencas.Count / partida.MaximoJogadores * 100;
-    }
-
-    private void AbrirModalConfirmacao()
-    {
-        Console.WriteLine("Clicou em Quero Jogar");
     }
 
     private void CarregarDadosFakes()
@@ -158,7 +227,8 @@
             Presencas = new List<PresencaViewModel>
             {
                 new PresencaViewModel { Nome = "Kelvin Ribeiro", Posicao = "Meia", Confirmado = true },
-                new PresencaViewModel { Nome = "Neymar Jr", Posicao = "Atacante", Confirmado = true }
+                new PresencaViewModel { Nome = "Neymar Jr", Posicao = "Atacante", Confirmado = true },
+                new PresencaViewModel { Nome = "Vinicius Jr", Posicao = "Ponta", Confirmado = true }
             }
         };
     }

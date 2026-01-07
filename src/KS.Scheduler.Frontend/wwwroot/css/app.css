@@ -1,5 +1,14 @@
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #0f172a; /* A mesma cor escura do seu tema */
+    color: white;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    height: 100%;
+    overflow: hidden; /* Evita barra de rolagem dupla */
+}
+
+#app {
+    height: 100%;
 }
 
 h1:focus {

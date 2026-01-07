@@ -34,6 +34,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEVtcHR5TGF5b3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/55129/Documents/Projetos/KS-Scheduler/src/KS.Scheduler.Frontend/Pages/Estatisticas.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXN0YXRpc3RpY2FzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/55129/Documents/Projetos/KS-Scheduler/src/KS.Scheduler.Frontend/Pages/Financeiro.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmluYW5jZWlyby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/55129/Documents/Projetos/KS-Scheduler/src/KS.Scheduler.Frontend/Pages/Historico.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSGlzdG9yaWNvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/55129/Documents/Projetos/KS-Scheduler/src/KS.Scheduler.Frontend/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

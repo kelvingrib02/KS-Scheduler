@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.frontend\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|solutionrelative:src\\ks.scheduler.frontend\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.frontend\\pages\\orcamento.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|solutionrelative:src\\ks.scheduler.frontend\\pages\\orcamento.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.frontend\\pages\\financeiro.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|solutionrelative:src\\ks.scheduler.frontend\\pages\\financeiro.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.frontend\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|solutionrelative:src\\ks.scheduler.frontend\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.frontend\\pages\\landing.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|solutionrelative:src\\ks.scheduler.frontend\\pages\\landing.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.frontend\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|solutionrelative:src\\ks.scheduler.frontend\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.frontend\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|solutionrelative:src\\ks.scheduler.frontend\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.frontend\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|solutionrelative:src\\ks.scheduler.frontend\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.frontend\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|solutionrelative:src\\ks.scheduler.frontend\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.frontend\\layout\\emptylayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|solutionrelative:src\\ks.scheduler.frontend\\layout\\emptylayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.frontend\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|solutionrelative:src\\ks.scheduler.frontend\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{49F19D9E-C65A-4557-A299-7739F96FBD44}|src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.application\\usecases\\obterpartidausecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,10 +67,6 @@
       "RelativeMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|solutionrelative:src\\ks.scheduler.frontend\\models\\partidaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.frontend\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|solutionrelative:src\\ks.scheduler.frontend\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\ks-scheduler\\src\\ks.scheduler.frontend\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{44CA1ECF-08B0-4E2D-ABB2-7162C3525246}|src\\KS.Scheduler.Frontend\\KS.Scheduler.Frontend.csproj|solutionrelative:src\\ks.scheduler.frontend\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -58,41 +78,106 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Orcamento.razor",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Pages\\Orcamento.razor",
+              "RelativeDocumentMoniker": "src\\KS.Scheduler.Frontend\\Pages\\Orcamento.razor",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Pages\\Orcamento.razor",
+              "RelativeToolTip": "src\\KS.Scheduler.Frontend\\Pages\\Orcamento.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-07T02:27:44.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Financeiro.razor",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Pages\\Financeiro.razor",
+              "RelativeDocumentMoniker": "src\\KS.Scheduler.Frontend\\Pages\\Financeiro.razor",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Pages\\Financeiro.razor",
+              "RelativeToolTip": "src\\KS.Scheduler.Frontend\\Pages\\Financeiro.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-07T02:27:34.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\wwwroot\\css\\app.css",
+              "RelativeDocumentMoniker": "src\\KS.Scheduler.Frontend\\wwwroot\\css\\app.css",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\wwwroot\\css\\app.css",
+              "RelativeToolTip": "src\\KS.Scheduler.Frontend\\wwwroot\\css\\app.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-07T02:22:38.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "src\\KS.Scheduler.Frontend\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "src\\KS.Scheduler.Frontend\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAN4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-07T02:19:05.344Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
+              "Title": "EmptyLayout.razor",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Layout\\EmptyLayout.razor",
+              "RelativeDocumentMoniker": "src\\KS.Scheduler.Frontend\\Layout\\EmptyLayout.razor",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Layout\\EmptyLayout.razor",
+              "RelativeToolTip": "src\\KS.Scheduler.Frontend\\Layout\\EmptyLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-06T17:27:00.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Pages\\Login.razor",
               "RelativeDocumentMoniker": "src\\KS.Scheduler.Frontend\\Pages\\Login.razor",
               "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Pages\\Login.razor",
               "RelativeToolTip": "src\\KS.Scheduler.Frontend\\Pages\\Login.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-01-06T17:26:36.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Landing.razor",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Pages\\Landing.razor",
               "RelativeDocumentMoniker": "src\\KS.Scheduler.Frontend\\Pages\\Landing.razor",
               "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Pages\\Landing.razor",
               "RelativeToolTip": "src\\KS.Scheduler.Frontend\\Pages\\Landing.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-01-06T17:26:14.019Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "ObterPartidaUseCase.cs",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Application\\UseCases\\ObterPartidaUseCase.cs",
               "RelativeDocumentMoniker": "src\\KS.Scheduler.Application\\UseCases\\ObterPartidaUseCase.cs",
@@ -105,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "PartidaRepository.cs",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Infrastructure\\Repositories\\PartidaRepository.cs",
               "RelativeDocumentMoniker": "src\\KS.Scheduler.Infrastructure\\Repositories\\PartidaRepository.cs",
@@ -117,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "IPartidaRepository.cs",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Domain\\Interfaces\\IPartidaRepository.cs",
               "RelativeDocumentMoniker": "src\\KS.Scheduler.Domain\\Interfaces\\IPartidaRepository.cs",
@@ -129,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Program.cs",
               "RelativeDocumentMoniker": "src\\KS.Scheduler.Frontend\\Program.cs",
@@ -141,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\Program.cs",
               "RelativeDocumentMoniker": "src\\KS.Scheduler.API\\Program.cs",
@@ -153,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "PartidasController.cs",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\Controllers\\PartidasController.cs",
               "RelativeDocumentMoniker": "src\\KS.Scheduler.API\\Controllers\\PartidasController.cs",
@@ -166,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "PartidaViewModel.cs",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Models\\PartidaViewModel.cs",
               "RelativeDocumentMoniker": "src\\KS.Scheduler.Frontend\\Models\\PartidaViewModel.cs",
@@ -184,14 +269,14 @@
               "RelativeDocumentMoniker": "src\\KS.Scheduler.Frontend\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\Pages\\Home.razor",
               "RelativeToolTip": "src\\KS.Scheduler.Frontend\\Pages\\Home.razor",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAqwKoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-01-06T04:09:31.328Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\App.razor",
               "RelativeDocumentMoniker": "src\\KS.Scheduler.Frontend\\App.razor",
@@ -203,15 +288,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "src\\KS.Scheduler.Frontend\\wwwroot\\index.html",
               "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Frontend\\wwwroot\\index.html",
               "RelativeToolTip": "src\\KS.Scheduler.Frontend\\wwwroot\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-01-06T04:17:10.381Z"
+              "WhenOpened": "2026-01-06T04:17:10.381Z",
+              "EditorCaption": ""
             }
           ]
         }

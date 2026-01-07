@@ -6,15 +6,12 @@
 
 <div class="login-container d-flex align-items-center justify-content-center">
 
-    <!-- Card de Login -->
     <div class="login-card animate-up">
 
-        <!-- Logo -->
         <div class="text-center mb-4">
             <div class="logo fw-bold text-white fs-2 mb-2">KS <span class="text-gradient">Scheduler</span></div>
         </div>
 
-        <!-- Formulário -->
         <div class="login-form">
 
             @if (!string.IsNullOrEmpty(errorMessage))
@@ -50,7 +47,6 @@
 </div>
 
 <style>
-    /* --- VARIÁVEIS (Mesmas da Landing) --- */
     :root {
         --bg-dark: #0f172a;
         --card-bg: #1e293b;
@@ -95,7 +91,6 @@
         color: var(--primary) !important;
     }
 
-    /* --- INPUTS CUSTOMIZADOS DARK --- */
     .custom-input {
         background-color: var(--input-bg);
         border: 1px solid #334155;
@@ -116,7 +111,6 @@
             color: #475569;
         }
 
-    /* --- BOTÃO --- */
     .btn-cta {
         background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
         color: white;
@@ -134,7 +128,6 @@
             box-shadow: 0 15px 25px -5px rgba(16, 185, 129, 0.4);
         }
 
-    /* --- ANIMAÇÃO DE ENTRADA --- */
     .animate-up {
         animation: fadeInUp 0.6s ease-out forwards;
     }
@@ -161,7 +154,7 @@
     {
         if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
         {
-            errorMessage = "Preencha todos os campos, artilheiro!";
+            errorMessage = "Preencha todos os campos!";
             return;
         }
 
