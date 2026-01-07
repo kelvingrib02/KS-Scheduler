@@ -2,14 +2,11 @@
 
 <div class="page-layout d-flex">
 
-    <!-- Sidebar Fixa (Desktop) -->
     <div class="sidebar-wrapper d-none d-md-block">
         <NavMenu />
     </div>
 
-    <!-- Conteúdo Principal -->
     <main class="content-wrapper flex-grow-1">
-        <!-- Topbar Mobile (Só aparece no celular) -->
         <div class="d-md-none p-3 d-flex justify-content-between align-items-center bg-dark-header">
             <span class="fw-bold text-white">KS Scheduler</span>
             <button class="btn btn-sm btn-outline-success">☰</button>
@@ -23,10 +20,9 @@
 
 <style>
     :root {
-        --bg-dark: #0f172a; /* Cor de fundo da Landing Page */
+        --bg-dark: #0f172a;
     }
 
-    /* Garante fundo escuro na tela toda */
     body, html, .page-layout {
         background-color: var(--bg-dark) !important;
         color: white;
