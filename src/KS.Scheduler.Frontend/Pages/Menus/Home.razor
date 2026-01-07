@@ -1,299 +1,283 @@
 ﻿@page "/home"
 @using KS.Scheduler.Frontend.Models
+@using KS.Scheduler.Domain.Enums
 @inject HttpClient Http
 @inject IJSRuntime JS
 
 <PageTitle>Painel - KS Scheduler</PageTitle>
 
-@if (partida == null)
+@if (errorMessage != null)
 {
-    <div class="d-flex flex-column align-items-center justify-content-center h-100 animate-fade-in" style="min-height: 70vh;">
-        <div class="spinner-grow text-primary mb-3" role="status" style="width: 3rem; height: 3rem;"></div>
-        <p class="text-white fw-bold">Entrando em campo...</p>
+    <!-- TELA DE ERRO (Caso o ID esteja errado ou API fora) -->
+    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+        <div class="text-danger mb-3" style="font-size: 3rem;">⚠️</div>
+        <h3 class="text-white">Ops, algo deu errado</h3>
+        <p class="text-white">@errorMessage</p>
+        <button class="btn btn-outline-light mt-3" @onclick="CarregarDados">Tentar Novamente</button>
+    </div>
+}
+else if (partida == null)
+{
+    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+        <div class="spinner-border text-primary mb-3" role="status"></div>
+        <p class="text-white animate-pulse">Carregando dados da partida...</p>
     </div>
 }
 else
 {
-    <div class="container-fluid p-0 animate-up">
+    <div class="container-fluid p-0 fade-in">
 
-        <div class="card-hero mb-4 p-4 p-md-5 position-relative overflow-hidden">
-            <div class="hero-bg-decoration"></div>
+        <div class="hero-card mb-4 p-4">
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
 
-            <div class="row align-items-center position-relative z-index-1">
-                <div class="col-lg-8 mb-4 mb-lg-0">
-                    <div class="d-flex align-items-center gap-3 mb-2">
-                        <span class="badge bg-success bg-opacity-20 text-white border border-success border-opacity-25 px-3 py-2 rounded-pill">
-                            ⚽ Próximo Jogo
-                        </span>
-                        <span class="text-white-50">@partida.DataHora.ToString("dd 'de' MMMM")</span>
+                <div>
+                    <div class="badge bg-success bg-opacity-20 text-white mb-2 px-3 py-2 rounded-pill">
+                        ⚽ Próximo Jogo Confirmado
                     </div>
+                    <h2 class="fw-bold text-white mb-1">@partida.Local</h2>
 
-                    <h1 class="display-5 fw-bold text-white mb-2">@partida.Local</h1>
-
-                    <div class="d-flex flex-wrap gap-4 text-gray-300 mt-3">
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-clock text-primary"></i>
-                            <span class="fs-5">@partida.DataHora.ToString("HH:mm")</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-geo-alt text-primary"></i>
-                            <span>Campo Society 3</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-cash-stack text-primary"></i>
-                            <span>R$ @partida.ValorPorPessoa.ToString("F2") / pessoa</span>
-                        </div>
+                    <div class="d-flex flex-column text-gray mt-2 gap-1">
+                        <span><i class="bi bi-calendar-event me-2"></i>Data: @partida.DataHora.ToString("dd/MM/yyyy")</span>
+                        <span><i class="bi bi-clock me-2"></i>Hora: @partida.DataHora.ToString("HH:mm")</span>
+                        <span class=\"text-white fw-bold d-flex align-items-center\">@ObterIconeEsporte() <span class=\"ms-2\">@FormatTipoJogo(partida.TipoJogo)</span></span>
                     </div>
                 </div>
 
-                <div class="col-lg-4 d-flex flex-column gap-3 justify-content-end">
-                    <button class="btn btn-primary-gradient w-100 py-3 d-flex align-items-center justify-content-center gap-2 shadow-lg" @onclick="CopiarLinkConvite">
-                        <i class="bi bi-whatsapp fs-5"></i>
-                        <span class="fw-bold">Convidar no WhatsApp</span>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-dark-glass" @onclick="AbrirMapa">
+                        <i class="bi bi-geo-alt-fill text-danger me-2"></i> Local
                     </button>
+                    <button class="btn btn-whatsapp" @onclick="CompartilharWhatsApp">
+                        <i class="bi bi-whatsapp me-2"></i> Convidar
+                    </button>
+                </div>
+            </div>
 
-                    <div class="d-flex gap-3">
-                        <a href="https://maps.google.com/?q=@partida.Local" target="_blank" class="btn btn-outline-light flex-grow-1 py-2 d-flex align-items-center justify-content-center gap-2">
-                            <i class="bi bi-map"></i> Ver Mapa
-                        </a>
-                        <button class="btn btn-outline-light flex-grow-1 py-2 d-flex align-items-center justify-content-center gap-2">
-                            <i class="bi bi-pencil"></i> Editar
-                        </button>
-                    </div>
+            <div class="mt-4">
+                <div class="d-flex justify-content-between text-sm mb-1">
+                    <span class="text-white fw-bold">Lotação</span>
+                    <span class="text-gray">@ObterConfirmados().Count() / @partida.MaximoJogadores Jogadores</span>
+                </div>
+                <div class="progress bg-dark" style="height: 8px;">
+                    <div class="progress-bar bg-gradient-primary" role="progressbar"
+                         style="width: @(CalcularPorcentagem())%"></div>
                 </div>
             </div>
         </div>
 
-        <div class="row g-4 mb-4">
-            <div class="col-md-6">
-                <div class="stat-card p-4 h-100 d-flex flex-column justify-content-between">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <div>
-                            <p class="text-white mb-1 text-uppercase fw-bold small">Arrecadação</p>
-                            <h3 class="fw-bold text-white mb-0">R$ @CalcularArrecadado().ToString("F2")</h3>
-                        </div>
-                        <div class="icon-circle bg-success bg-opacity-10 text-success">
-                            <i class="bi bi-currency-dollar fs-4"></i>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="d-flex justify-content-between small mb-1">
-                            <span class="text-white-50">Meta: R$ @(partida.ValorPorPessoa* partida.MaximoJogadores)</span>
-                            <span class="text-success fw-bold">@CalcularPorcentagemFinanceira()%</span>
-                        </div>
-                        <div class="progress bg-dark" style="height: 6px;">
-                            <div class="progress-bar bg-success" style="width: @(CalcularPorcentagemFinanceira())%"></div>
-                        </div>
-                    </div>
+        <div class="row g-3 mb-4">
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <small class="text-gray">Total Arrecadado</small>
+                    <h3 class="text-success fw-bold mb-0">R$ @CalcularTotalArrecadado().ToString("F2")</h3>
                 </div>
             </div>
-
-            <div class="col-md-6">
-                <div class="stat-card p-4 h-100 d-flex flex-column justify-content-between">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <div>
-                            <p class="text-white mb-1 text-uppercase fw-bold small">Jogadores</p>
-                            <h3 class="fw-bold text-white mb-0">@ObterConfirmados().Count() <span class="text-white fs-6">/ @partida.MaximoJogadores</span></h3>
-                        </div>
-                        <div class="icon-circle bg-primary bg-opacity-10 text-primary">
-                            <i class="bi bi-people-fill fs-4"></i>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="d-flex justify-content-between small mb-1">
-                            <span class="text-white-50">Vagas restantes: @(partida.MaximoJogadores - ObterConfirmados().Count())</span>
-                            <span class="text-primary fw-bold">@CalcularPorcentagemLotacao()%</span>
-                        </div>
-                        <div class="progress bg-dark" style="height: 6px;">
-                            <div class="progress-bar bg-primary" style="width: @(CalcularPorcentagemLotacao())%"></div>
-                        </div>
-                    </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <small class="text-gray">A Receber</small>
+                    <h3 class="text-warning fw-bold mb-0">R$ @CalcularTotalPendente().ToString("F2")</h3>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <small class="text-gray">Valor por Pessoa</small>
+                    <h3 class="text-white fw-bold mb-0">R$ @partida.ValorPorPessoa.ToString("F2")</h3>
                 </div>
             </div>
         </div>
 
         <div class="row g-4">
-            <div class="col-lg-4">
-                <div class="list-container">
-                    <div class="list-header border-bottom border-success border-opacity-50 pb-3 mb-3 d-flex justify-content-between align-items-center">
-                        <h5 class="fw-bold text-white mb-0">✅ Confirmados</h5>
-                        <span class="badge bg-dark border border-secondary text-white">@ObterConfirmados().Count()</span>
-                    </div>
-
-                    <div class="list-scrollable">
+            <div class="col-md-4">
+                <div class="list-card border-top-success">
+                    <h5 class="fw-bold text-success mb-3">✅ Confirmados (@ObterConfirmados().Count())</h5>
+                    <div class="player-list">
                         @foreach (var p in ObterConfirmados())
                         {
-                            <div class="player-card mb-2 animate-in-item">
-                                <div class="avatar bg-success-gradient">@p.Nome.Substring(0, 1)</div>
-                                <div class="flex-grow-1 ms-3">
+                            <div class="player-item">
+                                <span class="avatar bg-success">@p.Nome.Substring(0, 1)</span>
+                                <div>
                                     <div class="fw-bold text-white">@p.Nome</div>
-                                    <small class="text-success small">@p.Posicao</small>
+                                    <small class="text-success-dim">@p.Posicao</small>
                                 </div>
-                                @if (true)
-                                {
-                                    <i class="bi bi-check-circle-fill text-success" title="Pago"></i>
-                                }
                             </div>
+                        }
+                        @if (!ObterConfirmados().Any())
+                        {
+                            <small class="text-white">Ninguém confirmado ainda.</small>
                         }
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4">
-                <div class="list-container">
-                    <div class="list-header border-bottom border-warning border-opacity-50 pb-3 mb-3 d-flex justify-content-between align-items-center">
-                        <h5 class="fw-bold text-white mb-0">⏳ Pendentes</h5>
-                        <span class="badge bg-dark border border-secondary text-white">3</span>
-                    </div>
-
-                    <div class="list-scrollable">
-                        <div class="player-card mb-2 opacity-75">
-                            <div class="avatar bg-warning text-dark fw-bold">?</div>
-                            <div class="flex-grow-1 ms-3">
-                                <div class="fw-bold text-gray-300">Aguardando convite...</div>
-                                <small class="text-white small">Link enviado há 10min</small>
-                            </div>
-                        </div>
-                        <div class="player-card mb-2 opacity-75">
-                            <div class="avatar bg-warning text-dark fw-bold">?</div>
-                            <div class="flex-grow-1 ms-3">
-                                <div class="fw-bold text-gray-300">Aguardando convite...</div>
+            <div class="col-md-4">
+                <div class="list-card border-top-warning">
+                    <h5 class="fw-bold text-warning mb-3">⏳ Pendentes</h5>
+                    <div class="player-list">
+                        <div class="player-item opacity-50">
+                            <span class="avatar bg-warning text-dark">?</span>
+                            <div>
+                                <div class="fw-bold text-white">Aguardando...</div>
+                                <small class="text-white">Envie o link no WhatsApp</small>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4">
-                <div class="list-container">
-                    <div class="list-header border-bottom border-danger border-opacity-50 pb-3 mb-3 d-flex justify-content-between align-items-center">
-                        <h5 class="fw-bold text-white mb-0">💸 Pagamento Pendente</h5>
-                        <span class="badge bg-danger text-white">R$ 50,00</span>
-                    </div>
-
-                    <div class="list-scrollable">
-                        <div class="player-card mb-2 border-start border-danger border-3">
-                            <div class="avatar bg-dark text-danger border border-danger">J</div>
-                            <div class="flex-grow-1 ms-3">
-                                <div class="fw-bold text-white">Jorge da Silva</div>
-                                <small class="text-danger small">Pendente</small>
+            <div class="col-md-4">
+                <div class="list-card border-top-danger">
+                    <h5 class="fw-bold text-danger mb-3">💸 Pagamento Pendente</h5>
+                    <div class="player-list">
+                        @foreach (var p in ObterConfirmados().Take(2))
+                        {
+                            <div class="player-item">
+                                <span class="avatar bg-danger">@p.Nome.Substring(0, 1)</span>
+                                <div class="w-100">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="fw-bold text-white">@p.Nome</span>
+                                        <span class="text-danger fw-bold">R$ @partida.ValorPorPessoa.ToString("F0")</span>
+                                    </div>
+                                    <small class="text-danger-dim">Pix não identificado</small>
+                                </div>
                             </div>
-                            <div class="text-danger fw-bold">R$ 25</div>
-                        </div>
-                        <div class="player-card mb-2 border-start border-danger border-3">
-                            <div class="avatar bg-dark text-danger border border-danger">M</div>
-                            <div class="flex-grow-1 ms-3">
-                                <div class="fw-bold text-white">Marcos Paulo</div>
-                                <small class="text-danger small">Pendente</small>
-                            </div>
-                            <div class="text-danger fw-bold">R$ 25</div>
-                        </div>
+                        }
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 }
 
 <style>
-    .card-hero {
+    .hero-card {
         background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-        border-radius: 24px;
-        border: 1px solid rgba(255,255,255,0.05);
-        box-shadow: 0 20px 40px -10px rgba(0,0,0,0.3);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
     }
 
-    .hero-bg-decoration {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-image: radial-gradient(circle at top right, rgba(16, 185, 129, 0.15), transparent 40%);
-        z-index: 0;
-    }
-
-    .btn-primary-gradient {
-        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-        border: none;
+    .btn-dark-glass {
+        background: rgba(255,255,255,0.05);
         color: white;
-        border-radius: 12px;
-        transition: transform 0.2s, box-shadow 0.2s;
+        border: 1px solid rgba(255,255,255,0.1);
+        transition: all 0.2s;
     }
 
-        .btn-primary-gradient:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.4);
+        .btn-dark-glass:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+    .btn-whatsapp {
+        background-color: #25D366;
+        color: white;
+        border: none;
+        font-weight: bold;
+    }
+
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
             color: white;
         }
 
     .stat-card {
-        background-color: #1e293b;
-        border-radius: 20px;
-        border: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .icon-circle {
-        width: 48px;
-        height: 48px;
+        background: #1e293b;
+        padding: 1.2rem;
         border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        border: 1px solid rgba(255,255,255,0.05);
+        height: 100%;
     }
 
-    .list-container {
-        background-color: rgba(30, 41, 59, 0.5);
-        border-radius: 20px;
+    .list-card {
+        background: #1e293b;
+        border-radius: 16px;
         padding: 1.5rem;
         height: 100%;
-        border: 1px solid rgba(255,255,255,0.02);
+        border: 1px solid rgba(255,255,255,0.05);
     }
 
-    .player-card {
+    .border-top-success {
+        border-top: 4px solid #10b981;
+    }
+
+    .border-top-warning {
+        border-top: 4px solid #f59e0b;
+    }
+
+    .border-top-danger {
+        border-top: 4px solid #ef4444;
+    }
+
+    .player-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .player-item {
         display: flex;
         align-items: center;
-        background-color: #1e293b;
-        padding: 0.8rem;
-        border-radius: 12px;
-        border: 1px solid rgba(255,255,255,0.05);
-        transition: transform 0.2s;
+        gap: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
-        .player-card:hover {
-            background-color: #253045;
-            transform: translateX(4px);
+        .player-item:last-child {
+            border-bottom: none;
         }
 
     .avatar {
-        width: 38px;
-        height: 38px;
-        border-radius: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: bold;
         color: white;
-        font-size: 0.9rem;
+        flex-shrink: 0;
     }
 
-    .bg-success-gradient {
-        background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+    .bg-gradient-primary {
+        background: linear-gradient(90deg, #10b981, #34d399);
     }
 
-    .text-gray-300 {
-        color: #cbd5e1;
+    .text-gray {
+        color: #94a3b8;
     }
 
-    .animate-up {
-        animation: fadeInUp 0.5s ease-out;
+    .text-success-dim {
+        color: rgba(16, 185, 129, 0.7);
+        font-size: 0.85rem;
     }
 
-    @@keyframes fadeInUp {
+    .text-danger-dim {
+        color: rgba(239, 68, 68, 0.7);
+        font-size: 0.85rem;
+    }
+
+    .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @@keyframes pulse {
+        0%, 100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: .5;
+        }
+    }
+
+    .fade-in {
+        animation: fadeIn 0.5s ease-in;
+    }
+
+    @@keyframes fadeIn {
         from {
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(10px);
         }
 
         to {
@@ -305,62 +289,93 @@ else
 
 @code {
     private PartidaViewModel? partida;
-    private string idPartidaTeste = "AED60E36-A9C6-4A8F-A8A5-CE82A6532700";
+    private string? errorMessage;
+
+    private string idPartidaReal = "AED60E36-A9C6-4A8F-A8A5-CE82A6532700";
 
     protected override async Task OnInitializedAsync()
     {
-        await Task.Delay(1000);
-        CarregarDadosFakes();
+        await CarregarDados();
     }
 
-    private IEnumerable<PresencaViewModel> ObterConfirmados() => partida?.Presencas.Where(x => x.Confirmado) ?? new List<PresencaViewModel>();
+    private async Task CarregarDados()
+    {
+        errorMessage = null;
+        try
+        {
 
-    private double CalcularPorcentagemLotacao()
+            partida = await Http.GetFromJsonAsync<PartidaViewModel>($"api/partidas/{idPartidaReal}");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Erro ao conectar com a API: {ex.Message}. Verifique se o ID '{idPartidaReal}' existe no banco.";
+        }
+    }
+
+    private IEnumerable<PresencaViewModel> ObterConfirmados()
+    {
+        if (partida == null) return new List<PresencaViewModel>();
+        return partida.Presencas.Where(x => x.Confirmado);
+    }
+
+    private double CalcularPorcentagem()
     {
         if (partida == null || partida.MaximoJogadores == 0) return 0;
-        return Math.Round((double)partida.Presencas.Count / partida.MaximoJogadores * 100);
+        return (double)ObterConfirmados().Count() / partida.MaximoJogadores * 100;
     }
 
-    private double CalcularArrecadado()
+    private decimal CalcularTotalArrecadado()
     {
         if (partida == null) return 0;
-        return (double)partida.Presencas.Count(x => x.Confirmado) * (double)partida.ValorPorPessoa;
+        return ObterConfirmados().Count() * partida.ValorPorPessoa;
     }
 
-    private double CalcularPorcentagemFinanceira()
+    private decimal CalcularTotalPendente()
     {
-        if (partida == null || partida.MaximoJogadores == 0) return 0;
-
-        var totalPossivel = partida.MaximoJogadores * partida.ValorPorPessoa; 
-        var totalAtual = partida.Presencas.Count(x => x.Confirmado) * partida.ValorPorPessoa;
-
-        if (totalPossivel == 0) return 0;
-
-        return (double)totalAtual / (double)totalPossivel * 100;
+        if (partida == null) return 0;
+        return 2 * partida.ValorPorPessoa;
     }
 
-    private void CopiarLinkConvite()
+    private async Task CompartilharWhatsApp()
     {
-        
+        if (partida == null) return;
+        var texto = $"Fala galera! Bora pro jogo no {partida.Local} dia {partida.DataHora:dd/MM} às {partida.DataHora:HH:mm}. Confirme aqui: https://ks-scheduler.com/convite/{partida.Id}";
+        var url = $"https://wa.me/?text={Uri.EscapeDataString(texto)}";
+        await JS.InvokeVoidAsync("open", url, "_blank");
     }
 
-    private void CarregarDadosFakes()
+    private async Task AbrirMapa()
     {
-        partida = new PartidaViewModel
+        if (partida == null) return;
+        var url = $"https://www.google.com/maps/search/?api=1&query={Uri.EscapeDataString(partida.Local)}";
+        await JS.InvokeVoidAsync("open", url, "_blank");
+    }
+
+    private string ObterIconeEsporte()
+    {
+        if (partida == null) return "🎮";
+
+        return partida.TipoJogo.ToString() switch
         {
-            Id = Guid.NewGuid(),
-            DataHora = DateTime.Now.AddDays(2).AddHours(19),
-            Local = "Arena Society Center - Campo 3",
-            MaximoJogadores = 14,
-            ValorPorPessoa = 25.00m,
-            Presencas = new List<PresencaViewModel>
-            {
-                new PresencaViewModel { Nome = "Kelvin Ribeiro", Posicao = "Meia", Confirmado = true },
-                new PresencaViewModel { Nome = "Neymar Jr", Posicao = "Atacante", Confirmado = true },
-                new PresencaViewModel { Nome = "Vinicius Jr", Posicao = "Ponta", Confirmado = true },
-                new PresencaViewModel { Nome = "Marquinhos", Posicao = "Zagueiro", Confirmado = true },
-                new PresencaViewModel { Nome = "Alisson", Posicao = "Goleiro", Confirmado = true }
-            }
+            "1" => "⚽",
+            "Futsal" => "⚽",
+            "Campo" => "⚽",
+            "Futevolei" => "🏐",
+            "Basquete" => "🏀",
+            "Tenis" => "🎾",
+            _ => "🏆"
         };
+    }
+
+    private string FormatTipoJogo(TipoJogo tipo)
+    {
+        var nome = tipo.ToString();
+
+        if (nome == "Society") return "Futebol Society";
+        if (nome == "Futsal") return "Futsal";
+        if (nome == "Campo") return "Campo";
+        if (nome == "Futevolei") return "Futevolei";
+
+        return nome;
     }
 }

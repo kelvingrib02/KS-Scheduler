@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using KS.Scheduler.Domain.Enums;
 
 namespace KS.Scheduler.Frontend.Models
 {
@@ -10,6 +11,7 @@ namespace KS.Scheduler.Frontend.Models
         public string Local { get; set; } = string.Empty;
         public decimal ValorPorPessoa { get; set; }
         public int MaximoJogadores { get; set; }
+        public TipoJogo TipoJogo { get; set; }
         public List<PresencaViewModel> Presencas { get; set; } = new();
     }
 
