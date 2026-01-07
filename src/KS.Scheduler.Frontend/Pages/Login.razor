@@ -2,70 +2,184 @@
 @layout Layout.EmptyLayout
 @inject NavigationManager NavManager
 
-<div class="d-flex align-items-center justify-content-center min-vh-100 bg-light">
-    <div class="card border-0 shadow-lg p-4" style="max-width: 400px; width: 100%; border-radius: 15px;">
-        <div class="card-body">
-            <div class="text-center mb-4">
-                <div class="bg-primary text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 60px; height: 60px; font-size: 24px;">
-                    ⚽
-                </div>
-                <h4 class="fw-bold">Bem-vindo de volta!</h4>
-                <p class="text-muted small">Faça login para gerenciar suas partidas.</p>
-            </div>
+<PageTitle>Login - KS Scheduler</PageTitle>
 
-            <div class="mb-3">
-                <label class="form-label text-muted small fw-bold">E-MAIL</label>
-                <input type="email" class="form-control form-control-lg bg-light border-0" placeholder="seu@email.com" @bind="email" />
-            </div>
+<div class="login-container d-flex align-items-center justify-content-center">
 
-            <div class="mb-4">
-                <label class="form-label text-muted small fw-bold">SENHA</label>
-                <input type="password" class="form-control form-control-lg bg-light border-0" placeholder="••••••••" @bind="senha" />
-            </div>
+    <!-- Card de Login -->
+    <div class="login-card animate-up">
 
-            @if (!string.IsNullOrEmpty(erro))
+        <!-- Logo -->
+        <div class="text-center mb-4">
+            <div class="logo fw-bold text-white fs-2 mb-2">KS <span class="text-gradient">Scheduler</span></div>
+        </div>
+
+        <!-- Formulário -->
+        <div class="login-form">
+
+            @if (!string.IsNullOrEmpty(errorMessage))
             {
-                <div class="alert alert-danger py-2 small text-center rounded-3">
-                    @erro
+                <div class="alert alert-danger py-2 text-center small mb-3">
+                    @errorMessage
                 </div>
             }
 
-            <button class="btn btn-primary btn-lg w-100 rounded-pill fw-bold shadow-sm mb-3" @onclick="FazerLogin">
-                ENTRAR
+            <div class="mb-3">
+                <label class="form-label text-white small fw-bold">E-MAIL</label>
+                <input type="email" class="form-control custom-input" placeholder="ex: craque@bola.com" @bind="email">
+            </div>
+
+            <div class="mb-4">
+                <div class="d-flex justify-content-between">
+                    <label class="form-label text-white small fw-bold">SENHA</label>
+                </div>
+                <input type="password" class="form-control custom-input" placeholder="••••••••" @bind="password" @onkeyup="EnterKeyHandler">
+                <a href="#" class="small text-primary text-decoration-none">Esqueceu a senha?</a>
+            </div>
+
+            <button class="btn btn-cta w-100 mb-3" @onclick="FazerLogin">
+                ENTRAR EM CAMPO
             </button>
 
             <div class="text-center">
-                <a href="/" class="text-decoration-none small text-muted">Voltar para a Home</a>
+                <span class="text-gray small">Ainda não tem conta?</span>
+                <a href="#" class="text-primary small fw-bold text-decoration-none ms-1">Criar conta</a>
             </div>
         </div>
     </div>
 </div>
 
+<style>
+    /* --- VARIÁVEIS (Mesmas da Landing) --- */
+    :root {
+        --bg-dark: #0f172a;
+        --card-bg: #1e293b;
+        --input-bg: #0f172a;
+        --primary: #10b981;
+        --primary-dark: #047857;
+        --text-gray: #94a3b8;
+    }
+
+    body {
+        background-color: var(--bg-dark);
+        font-family: 'Inter', sans-serif;
+    }
+
+    .login-container {
+        min-height: 100vh;
+        width: 100%;
+        background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    }
+
+    .login-card {
+        background-color: var(--card-bg);
+        width: 100%;
+        max-width: 400px;
+        padding: 2.5rem;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    .text-gradient {
+        background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .text-gray {
+        color: var(--text-gray);
+    }
+
+    .text-primary {
+        color: var(--primary) !important;
+    }
+
+    /* --- INPUTS CUSTOMIZADOS DARK --- */
+    .custom-input {
+        background-color: var(--input-bg);
+        border: 1px solid #334155;
+        color: white;
+        padding: 0.8rem 1rem;
+        border-radius: 12px;
+        font-size: 0.95rem;
+    }
+
+        .custom-input:focus {
+            background-color: var(--input-bg);
+            border-color: var(--primary);
+            color: white;
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+        }
+
+        .custom-input::placeholder {
+            color: #475569;
+        }
+
+    /* --- BOTÃO --- */
+    .btn-cta {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: white;
+        border: none;
+        padding: 0.9rem;
+        font-weight: bold;
+        border-radius: 12px;
+        transition: transform 0.2s;
+        box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+    }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            color: white;
+            box-shadow: 0 15px 25px -5px rgba(16, 185, 129, 0.4);
+        }
+
+    /* --- ANIMAÇÃO DE ENTRADA --- */
+    .animate-up {
+        animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    @@keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
 @code {
     private string email = "";
-    private string senha = "";
-    private string erro = "";
+    private string password = "";
+    private string errorMessage = "";
 
     private void FazerLogin()
     {
-        // SIMULAÇÃO DE LOGIN (Pés no chão: MVP)
-        // Em produção, isso bateria na API para pegar um Token JWT
-
-        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(senha))
+        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
         {
-            erro = "Preencha todos os campos.";
+            errorMessage = "Preencha todos os campos, artilheiro!";
             return;
         }
 
-        // Senha padrão hardcoded para testes
-        if (senha == "admin123")
+        if (email == "123" && password == "123")
         {
-            // Login sucesso -> Vai para a tela da partida
             NavManager.NavigateTo("/app");
         }
         else
         {
-            erro = "Credenciais inválidas. Tente senha: admin123";
+            errorMessage = "E-mail ou senha inválidos. Tente novamente.";
+        }
+    }
+
+    private void EnterKeyHandler(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            FazerLogin();
         }
     }
 }

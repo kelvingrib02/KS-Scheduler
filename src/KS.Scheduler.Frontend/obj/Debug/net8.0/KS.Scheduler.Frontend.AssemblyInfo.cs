@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KS.Scheduler.Frontend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a9cb1897fb25d90d01e2e7953013631d77f6b40")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+baca544c61b19086636a2794492ed93a8957b6e0")]
 [assembly: System.Reflection.AssemblyProductAttribute("KS.Scheduler.Frontend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KS.Scheduler.Frontend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
