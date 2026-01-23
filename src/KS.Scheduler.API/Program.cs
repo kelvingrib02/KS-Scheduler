@@ -18,6 +18,7 @@ builder.Services.AddDbContext<KSSchedulerDbContext>(options => options.UseSqlSer
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IPartidaRepository, PartidaRepository>();
 builder.Services.AddScoped<IPresencaRepository, PresencaRepository>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 builder.Services.AddScoped<CriarPartidaUseCase>();
 builder.Services.AddScoped<ConfirmarPresencaUseCase>();

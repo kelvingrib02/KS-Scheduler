@@ -11,6 +11,7 @@ namespace KS.Scheduler.Infrastructure.Persistence
         private IJogadorRepository _jogadores;
         private IPartidaRepository _partidas;
         private IPresencaRepository _presencas;
+        private IUsuarioRepository _usuario;
         public UnitOfWork(KSSchedulerDbContext context)
         {
             _context = context;
@@ -29,6 +30,10 @@ namespace KS.Scheduler.Infrastructure.Persistence
         public IPresencaRepository Presencas
         {
             get { return _presencas ??= new PresencaRepository(_context); }
+        }
+        public IUsuarioRepository Usuario
+        {
+            get { return _usuario ??= new UsuarioRepository(_context); }
         }
         public async Task<bool> Commit()
         {
