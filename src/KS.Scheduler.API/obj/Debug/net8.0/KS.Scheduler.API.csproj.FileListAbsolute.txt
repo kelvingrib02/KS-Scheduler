@@ -151,3 +151,4 @@ C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\obj\Debug\ne
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\obj\Debug\net8.0\KS.Scheduler.API.pdb
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\obj\Debug\net8.0\KS.Scheduler.API.genruntimeconfig.cache
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\obj\Debug\net8.0\ref\KS.Scheduler.API.dll
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

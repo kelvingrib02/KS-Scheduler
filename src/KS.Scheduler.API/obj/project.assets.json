@@ -4319,11 +4319,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Api\\KS.Scheduler.Api.csproj",
-      "projectName": "KS.Scheduler.Api",
-      "projectPath": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Api\\KS.Scheduler.Api.csproj",
+      "projectUniqueName": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\KS.Scheduler.API.csproj",
+      "projectName": "KS.Scheduler.API",
+      "projectPath": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\KS.Scheduler.API.csproj",
       "packagesPath": "C:\\Users\\55129\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Api\\obj\\",
+      "outputPath": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4404,7 +4404,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

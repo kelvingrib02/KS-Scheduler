@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KS.Scheduler.Infrastructure.Repositories
 {
-    public class UsuarioRepository : Repository<Usuario>, IJogadorRepository
+    public class UsuarioRepository : Repository<Usuario>, IUsuarioRepository
     {
         public UsuarioRepository(KSSchedulerDbContext context) : base(context)
         {

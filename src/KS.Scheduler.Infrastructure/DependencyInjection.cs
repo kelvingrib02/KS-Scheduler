@@ -17,6 +17,7 @@ namespace KS.Scheduler.Infrastructure
             services.AddScoped<IJogadorRepository, JogadorRepository>();
             services.AddScoped<IPartidaRepository, PartidaRepository>();
             services.AddScoped<IPresencaRepository, PresencaRepository>();
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
