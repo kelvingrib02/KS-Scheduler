@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "KS.Scheduler.Frontend",
   "resources": {
-    "hash": "sha256-gLWV6iBs8RKlEnRKsn02Fi5zHQQvsZ0hiP2kE+kcT8A=",
+    "hash": "sha256-EtkYmWLcsLZHbWh1U10JXsiXaRUD7G6PAqeELJjNgMY=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-NljIbpK/1KCj0+knpX8U77Rbl5kTtfFIuFjK7AuczEw="
     },
@@ -209,12 +209,12 @@
       "mscorlib.wasm": "sha256-K9gNrsN9UmPqLs6J/FrkiKpmkVGnHjjqUsc7YGvesCY=",
       "netstandard.wasm": "sha256-4emjlXLM9qW3t2tlII20SDylBgG4ueI0wy9nh5FMd8g=",
       "System.Private.CoreLib.wasm": "sha256-2DN4v7I/tabltDEPdIO8sDBB0tY8zOm+0CvHbMssXW4=",
-      "KS.Scheduler.Domain.wasm": "sha256-xm92w64ISPwutcLiHrCwa5QMNZI5WHRf2LabRIedxeI=",
-      "KS.Scheduler.Frontend.wasm": "sha256-sJSsj72Dr60HkpmcSRDW8+bCY6+i/4hXKaqDnoLpBGo="
+      "KS.Scheduler.Domain.wasm": "sha256-NIG3uQ3e8NNm+6ctUThMcJf7M20tD8RRpAaRwROzsOs=",
+      "KS.Scheduler.Frontend.wasm": "sha256-ssgScARCL1MeTe2mCV2+g5L8nkd4cKz0M2KfmDZkWuY="
     },
     "pdb": {
-      "KS.Scheduler.Domain.pdb": "sha256-+YBEN6H9kG8fTWcdeb7S7vo0Ez2L5lC9QyKkF8ug0f8=",
-      "KS.Scheduler.Frontend.pdb": "sha256-lT1ZhmL8mp7YQXIhqfv9FuldzBp1zp+B/3rQjxHP/3E="
+      "KS.Scheduler.Domain.pdb": "sha256-IPTwikwIYMkAGZj9oOh5jcOlZ9E5PMrojWp95nzry+4=",
+      "KS.Scheduler.Frontend.pdb": "sha256-7k7nCqUjeNd+lXZRfcdVEqzovmAbz2mU6U3aI+ols3A="
     }
   },
   "cacheBootResources": true,

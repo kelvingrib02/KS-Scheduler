@@ -47,9 +47,9 @@ namespace KS.Scheduler.Infrastructure.Persistence
                 e.HasKey(p => p.Id);
                 e.Property(p => p.Id).ValueGeneratedNever();
                 e.Property(p => p.Telefone).HasMaxLength(20);
-                e.Property(p => p.Email).HasMaxLength(150);
-                e.Property(p => p.SenhaHash).HasMaxLength(200);
+                e.Property(p => p.Email).HasMaxLength(150).IsRequired();
                 e.HasIndex(p => p.Email).IsUnique();
+                e.Property(p => p.SenhaHash).HasMaxLength(200).IsRequired();
             });
         }
     }

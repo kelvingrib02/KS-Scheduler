@@ -4,6 +4,7 @@ using KS.Scheduler.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KS.Scheduler.Infrastructure.Migrations
 {
     [DbContext(typeof(KSSchedulerDbContext))]
-    partial class KSSchedulerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260126044616_AdicionarSenhaHashUsuario")]
+    partial class AdicionarSenhaHashUsuario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
