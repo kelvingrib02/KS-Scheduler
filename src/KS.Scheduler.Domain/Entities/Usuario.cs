@@ -1,6 +1,4 @@
 ﻿using KS.Scheduler.Domain.Entities.Base;
-using KS.Scheduler.Domain.Enums;
-using System.Collections.Generic;
 
 namespace KS.Scheduler.Domain.Entities
 {
@@ -8,19 +6,31 @@ namespace KS.Scheduler.Domain.Entities
     {
         protected Usuario() { }
 
-        public Usuario(string nome, string email, string telefone)
+        public Usuario(string nome, string email, string telefone, string senhaHash)
         {
             Nome = nome;
-            Telefone = telefone;
             Email = email;
+            Telefone = telefone;
+            SenhaHash = senhaHash;
         }
 
         public string Nome { get; private set; }
-        public string Telefone { get; private set; }
         public string Email { get; private set; }
+        public string Telefone { get; private set; }
+        public string SenhaHash { get; private set; }
+
         public void AtualizarTelefone(string novoTelefone)
         {
             Telefone = novoTelefone;
+        }
+        public void AtualizarEmail(string novoEmail)
+        {
+            Email = novoEmail;
+        }
+
+        public void AtualizarSenha(string novaSenhaHash)
+        {
+            SenhaHash = novaSenhaHash;
         }
     }
 }

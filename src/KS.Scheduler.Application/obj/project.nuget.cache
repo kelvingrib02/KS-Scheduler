@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZYj7fDQzFtY=",
+  "dgSpecHash": "lV7e63CiI58=",
   "success": true,
   "projectFilePath": "C:\\Users\\55129\\Documents\\Projetos\\KS-Scheduler\\src\\KS.Scheduler.Application\\KS.Scheduler.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\55129\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -2,19 +2,36 @@
 using KS.Scheduler.Domain.Interfaces;
 using KS.Scheduler.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 
 namespace KS.Scheduler.Infrastructure.Repositories
 {
-    public class UsuarioRepository : Repository<Usuario>, IUsuarioRepository
+    public class UsuarioRepository : IUsuarioRepository
     {
-        public UsuarioRepository(KSSchedulerDbContext context) : base(context)
+        private readonly KSSchedulerDbContext _context;
+
+        public UsuarioRepository(KSSchedulerDbContext context)
         {
+            _context = context;
         }
 
-        public async Task<Usuario> ObterPorTelefone(string telefone)
+        public async Task<Usuario> ObterPorIdAsync(Guid id)
         {
-            return await DbSet.AsNoTracking().FirstOrDefaultAsync(j => j.Telefone == telefone);
+            return await _context.Usuario.FirstOrDefaultAsync(u => u.Id == id);
+        }
+
+        public async Task<Usuario> ObterPorEmailAsync(string email)
+        {
+            return await _context.Usuario.FirstOrDefaultAsync(u => u.Email == email);
+        }
+
+        public async Task<bool> EmailExisteAsync(string email)
+        {
+            return await _context.Usuario.AnyAsync(u => u.Email == email);
+        }
+
+        public async Task AdicionarAsync(Usuario usuario)
+        {
+            await _context.Usuario.AddAsync(usuario);
         }
     }
 }

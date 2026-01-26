@@ -48,6 +48,8 @@ namespace KS.Scheduler.Infrastructure.Persistence
                 e.Property(p => p.Id).ValueGeneratedNever();
                 e.Property(p => p.Telefone).HasMaxLength(20);
                 e.Property(p => p.Email).HasMaxLength(150);
+                e.Property(p => p.SenhaHash).HasMaxLength(200);
+                e.HasIndex(p => p.Email).IsUnique();
             });
         }
     }

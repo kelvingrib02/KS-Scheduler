@@ -1,10 +1,12 @@
 ﻿using KS.Scheduler.Domain.Entities;
-using System.Threading.Tasks;
 
 namespace KS.Scheduler.Domain.Interfaces
 {
-    public interface IUsuarioRepository : IRepository<Usuario>
+    public interface IUsuarioRepository
     {
-        Task<Usuario> ObterPorTelefone(string telefone);
+        Task<Usuario> ObterPorIdAsync(Guid id);
+        Task<Usuario> ObterPorEmailAsync(string email);
+        Task<bool> EmailExisteAsync(string email);
+        Task AdicionarAsync(Usuario usuario);
     }
 }
