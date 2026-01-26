@@ -6,32 +6,34 @@ namespace KS.Scheduler.Application.UseCases
     public class LoginUseCase
     {
         private readonly IUsuarioRepository _usuarioRepository;
+        private readonly IAuthService _authService;
 
-        public LoginUseCase(IUsuarioRepository usuarioRepository)
+        public LoginUseCase(IUsuarioRepository usuarioRepository, IAuthService authService)
         {
             _usuarioRepository = usuarioRepository;
+            _authService = authService;
         }
 
-        public async Task<LoginResponse> ExecutarAsync(LoginRequest request, Func<Guid, string, string, string> gerarToken)
+        public async Task<LoginResponse> Executar(LoginRequest request)
         {
             var usuario = await _usuarioRepository.ObterPorEmailAsync(request.Email);
 
             if (usuario == null)
-                throw new Exception("Email ou senha inválidos.");
+                throw new Exception("Email ou senha inválidos");
 
-            var senhaValida = BCrypt.Net.BCrypt.Verify(request.Senha, usuario.SenhaHash);
+            var senhaValida = _authService.ValidarSenha(request.Senha, usuario.SenhaHash);
 
             if (!senhaValida)
-                throw new Exception("Email ou senha inválidos.");
+                throw new Exception("Email ou senha inválidos");
 
-            var token = gerarToken(usuario.Id, usuario.Email, usuario.Nome);
+            var token = _authService.GerarToken(usuario.Id, usuario.Email, usuario.Nome);
 
             return new LoginResponse
             {
                 Token = token,
                 Nome = usuario.Nome,
                 Email = usuario.Email,
-                UsuarioId = usuario.Id
+                Expiracao = DateTime.UtcNow.AddHours(24)
             };
         }
     }
