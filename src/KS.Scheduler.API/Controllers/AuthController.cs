@@ -28,7 +28,7 @@ namespace KS.Scheduler.API.Controllers
         {
             try
             {
-                var usuarioId = await _registrarUsuarioUseCase.ExecutarAsync(request);
+                var usuarioId = await _registrarUsuarioUseCase.Executar(request);
                 return Ok(new { UsuarioId = usuarioId, Mensagem = "Usuário cadastrado com sucesso!" });
             }
             catch (Exception ex)
@@ -42,10 +42,7 @@ namespace KS.Scheduler.API.Controllers
         {
             try
             {
-                var response = await _loginUseCase.ExecutarAsync(
-                    request,
-                    (id, email, nome) => _tokenService.GerarToken(id, email, nome)
-                );
+                var response = await _loginUseCase.Executar(request);
                 return Ok(response);
             }
             catch (Exception ex)

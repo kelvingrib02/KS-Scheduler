@@ -3,6 +3,8 @@ using KS.Scheduler.Application.UseCases;
 using KS.Scheduler.Domain.Interfaces;
 using KS.Scheduler.Infrastructure.Persistence;
 using KS.Scheduler.Infrastructure.Repositories;
+using KS.Scheduler.Infrastructure.Services;
+
 //using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -31,6 +33,8 @@ builder.Services.AddScoped<CancelarPresencaUseCase>();
 builder.Services.AddScoped<ObterPartidaUseCase>();
 builder.Services.AddScoped<RegistrarUsuarioUseCase>();
 builder.Services.AddScoped<LoginUseCase>();
+
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 // Services
 builder.Services.AddScoped<TokenService>();
