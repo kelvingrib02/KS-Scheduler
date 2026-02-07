@@ -1,1 +1,18 @@
-# KS-Scheduler
+# ⚽ KS Scheduler – Sistema de agenda de jogos amadores
+
+Management system for barbershops, focused on:
+
+- control of **clients**
+- **barbers**
+- **services**
+- **appointments**
+- (future) visibility of **profitability** and business metrics
+
+Project developed as a practical study of:
+
+- .NET 10
+- ASP.NET Core Web API
+- Blazor
+- Entity Framework Core 10
+- SQL Server
+- Layered architecture (Domain / Infrastructure / API / UI)
