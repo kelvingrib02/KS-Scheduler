@@ -10,6 +10,7 @@ namespace KS.Scheduler.Frontend.Models
         public DateTime DataHora { get; set; }
         public string Local { get; set; } = string.Empty;
         public decimal ValorPorPessoa { get; set; }
+        public decimal ValorTotal { get; set; }
         public int MaximoJogadores { get; set; }
         public TipoJogo TipoJogo { get; set; }
         public List<PresencaViewModel> Presencas { get; set; } = new();
