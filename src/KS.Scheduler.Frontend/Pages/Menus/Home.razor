@@ -69,19 +69,19 @@ else
             <div class="col-6 col-md-3">
                 <div class="stat-card">
                     <small class="text-gray">Total Arrecadado</small>
-                    <h3 class="text-success fw-bold mb-0">R$ @CalcularTotalArrecadado().ToString("F2")</h3>
+                    <h3 class="text-success fw-bold mb-0">R$ @CalcularTotalArrecadado().ToString("N2")</h3>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div class="stat-card">
                     <small class="text-gray">A Receber</small>
-                    <h3 class="text-warning fw-bold mb-0">R$ @CalcularTotalPendente().ToString("F2")</h3>
+                    <h3 class="text-warning fw-bold mb-0">R$ @CalcularTotalPendente().ToString("N2")</h3>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div class="stat-card">
                     <small class="text-gray">Valor por Pessoa</small>
-                    <h3 class="text-white fw-bold mb-0">R$ @partida.ValorPorPessoa.ToString("F2")</h3>
+                    <h3 class="text-white fw-bold mb-0">R$ @partida.ValorPorPessoa.ToString("N2")</h3>
                 </div>
             </div>
         </div>
@@ -291,7 +291,7 @@ else
     private PartidaViewModel? partida;
     private string? errorMessage;
 
-    private string idPartidaReal = "AED60E36-A9C6-4A8F-A8A5-CE82A6532700";
+    private string idPartidaReal = "c0d925c0-53f8-4289-8d32-ca387196543f";
 
     protected override async Task OnInitializedAsync()
     {
@@ -333,7 +333,10 @@ else
     private decimal CalcularTotalPendente()
     {
         if (partida == null) return 0;
-        return 2 * partida.ValorPorPessoa;
+
+        var totalConfirmados = ObterConfirmados().Count() * partida.ValorPorPessoa;
+
+        return partida.ValorTotal - totalConfirmados;
     }
 
     private async Task CompartilharWhatsApp()

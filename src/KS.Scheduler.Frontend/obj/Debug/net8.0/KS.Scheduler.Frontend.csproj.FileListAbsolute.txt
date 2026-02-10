@@ -1041,8 +1041,8 @@ C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Deb
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\3u310qj0ji-{0}-er8avzl4gu-er8avzl4gu.gz
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\y9mwosjveg-{0}-05k3ehe6n2-05k3ehe6n2.gz
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\0u7ej860ov-{0}-tyf228z45b-tyf228z45b.gz
-C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\21qm0y0n3t-{0}-ww2qootqqp-ww2qootqqp.gz
-C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\4acf3812wy-{0}-vfttcji1fp-vfttcji1fp.gz
-C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\mr2l8jhmm4-{0}-klo38cr1tp-klo38cr1tp.gz
-C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\vfmmlhysg0-{0}-g6cjaw2mnh-g6cjaw2mnh.gz
-C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\8baphgtjyx-{0}-7kmk18i7gz-7kmk18i7gz.gz
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\21qm0y0n3t-{0}-q3v0cpqfzl-q3v0cpqfzl.gz
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\4acf3812wy-{0}-hzxre6tcoy-hzxre6tcoy.gz
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\mr2l8jhmm4-{0}-jlule47xke-jlule47xke.gz
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\vfmmlhysg0-{0}-c5uxe10orv-c5uxe10orv.gz
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\8baphgtjyx-{0}-icenisevvl-icenisevvl.gz
