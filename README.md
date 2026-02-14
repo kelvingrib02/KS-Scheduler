@@ -6,6 +6,7 @@ Management system for barbershops, focused on:
 - **barbers**
 - **services**
 - **appointments**
+- **financial**
 - (future) visibility of **profitability** and business metrics
 
 Project developed as a practical study of:
