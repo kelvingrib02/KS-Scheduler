@@ -6,7 +6,7 @@ namespace KS.Scheduler.Application.DTOs
     {
         public Guid PartidaId { get; set; }
         public string NomeJogador { get; set; } = string.Empty;
-        public string TelefoneJogador { get; set; } = string.Empty;
+        public Guid JogadorId { get; set; }
         public string Posicao { get; set; } = "Linha";
     }
 }

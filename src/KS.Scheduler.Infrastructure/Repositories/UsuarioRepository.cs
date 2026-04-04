@@ -16,22 +16,22 @@ namespace KS.Scheduler.Infrastructure.Repositories
 
         public async Task<Usuario> ObterPorIdAsync(Guid id)
         {
-            return await _context.Usuario.FirstOrDefaultAsync(u => u.Id == id);
+            return await _context.Usuarios.FirstOrDefaultAsync(u => u.Id == id);
         }
 
         public async Task<Usuario> ObterPorEmailAsync(string email)
         {
-            return await _context.Usuario.FirstOrDefaultAsync(u => u.Email == email);
+            return await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == email);
         }
 
         public async Task<bool> EmailExisteAsync(string email)
         {
-            return await _context.Usuario.AnyAsync(u => u.Email == email);
+            return await _context.Usuarios.AnyAsync(u => u.Email == email);
         }
 
         public async Task AdicionarAsync(Usuario usuario)
         {
-            await _context.Usuario.AddAsync(usuario);
+            await _context.Usuarios.AddAsync(usuario);
         }
     }
 }

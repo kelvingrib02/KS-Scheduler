@@ -12,9 +12,9 @@ namespace KS.Scheduler.Infrastructure.Repositories
         {
         }
 
-        public async Task<Jogador> ObterPorTelefone(string telefone)
+        public async Task<Jogador> ObterPorId(Guid IdJogador)
         {
-            return await DbSet.AsNoTracking().FirstOrDefaultAsync(j => j.Telefone == telefone);
+            return await DbSet.AsNoTracking().FirstOrDefaultAsync(j => j.UsuarioId == IdJogador);
         }
     }
 }

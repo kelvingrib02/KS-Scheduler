@@ -31,9 +31,7 @@ namespace KS.Scheduler.Application.UseCases
                 Presencas = partida.Presencas.Select(p => new
                 {
                     p.Id,
-                    Nome = p.Jogador.Nome,
                     p.Jogador.Posicao,
-                    p.Jogador.Telefone,
                     p.Status
                 }).ToList()
             };

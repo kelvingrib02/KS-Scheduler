@@ -15,6 +15,12 @@ namespace KS.Scheduler.Infrastructure.Persistence.Mappings
             builder.Property(j => j.Email).IsRequired().HasColumnType("varchar(50)");
 
             builder.Property(j => j.Telefone).IsRequired().HasColumnType("varchar(20)");
+
+            builder.HasIndex(u => u.Email).IsUnique();
+
+            builder.Property(u => u.Id).ValueGeneratedNever();
+
+            builder.Property(u => u.SenhaHash).IsRequired().HasColumnType("varchar(200)");
         }
     }
 }

@@ -20,7 +20,7 @@ namespace KS.Scheduler.Application.UseCases
             if (partida == null)
                 throw new Exception("Partida não encontrada.");
 
-            var jogador = await _uow.Jogadores.ObterPorTelefone(input.TelefoneJogador);
+            var jogador = await _uow.Jogadores.ObterPorId(input.JogadorId);
             if (jogador == null)
                 throw new Exception("Jogador não encontrado com esse telefone.");
 

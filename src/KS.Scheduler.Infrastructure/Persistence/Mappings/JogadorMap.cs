@@ -8,13 +8,20 @@ namespace KS.Scheduler.Infrastructure.Persistence.Mappings
     {
         public void Configure(EntityTypeBuilder<Jogador> builder)
         {
+            builder.ToTable("Jogadores");
+
             builder.HasKey(j => j.Id);
 
-            builder.Property(j => j.Nome).IsRequired().HasColumnType("varchar(100)");
+            builder.Property(j => j.Id).ValueGeneratedNever();
 
-            builder.Property(j => j.Telefone).IsRequired().HasColumnType("varchar(20)");
+            builder.Property(j => j.Posicao).HasColumnType("varchar(50)").IsRequired();
 
-            //um jogador pode ter varias presencas por meio da chave estrangeira JogadorId na entidade Presenca
+            builder.Property(j => j.NivelHabilidade).IsRequired();
+
+            builder.Property(j => j.UsuarioId).IsRequired();
+
+            builder.HasOne(j => j.Usuario).WithOne().HasForeignKey<Jogador>(j => j.UsuarioId).OnDelete(DeleteBehavior.Restrict);
+
             builder.HasMany(j => j.Presencas).WithOne(p => p.Jogador).HasForeignKey(p => p.JogadorId);
         }
     }

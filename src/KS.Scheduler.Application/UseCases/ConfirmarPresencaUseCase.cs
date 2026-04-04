@@ -26,16 +26,16 @@ namespace KS.Scheduler.Application.UseCases
             if (partida.Presencas.Count >= partida.MaximoJogadores)
                 throw new Exception("A lista já está cheia! Entre na fila de espera.");
 
-            var jogador = await _uow.Jogadores.ObterPorTelefone(input.TelefoneJogador);
+            var jogador = await _uow.Jogadores.ObterPorId(input.JogadorId);
 
             if (jogador == null)
             {
-                jogador = new Jogador(input.NomeJogador, input.TelefoneJogador, input.Posicao, NivelHabilidade.Iniciante);
+                jogador = new Jogador(input.JogadorId, input.Posicao, NivelHabilidade.Iniciante);
 
                 await _uow.Jogadores.Adicionar(jogador);
             }
 
-            partida.AdicionarJogador(jogador);
+            partida.AdicionarJogador(jogador.Id);
 
             await _uow.Commit();
 

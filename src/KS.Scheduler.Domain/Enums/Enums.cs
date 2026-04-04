@@ -13,7 +13,8 @@
         Pendente = 1,
         Confirmado = 2,
         Recusado = 3,
-        Pago = 4
+        Pago = 4,
+        ListaEspera = 5
     }
 
     public enum NivelHabilidade
