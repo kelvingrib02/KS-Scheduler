@@ -1031,11 +1031,6 @@ C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Deb
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\5kxjtolv5l-{0}-tptq2av103-tptq2av103.gz
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\c4lmluhril-{0}-lfu7j35m59-lfu7j35m59.gz
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\4lixak7bpy-{0}-oyz0vx2fzb-oyz0vx2fzb.gz
-C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\21qm0y0n3t-{0}-rl87vo4okq-rl87vo4okq.gz
-C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\4acf3812wy-{0}-h5cue8pqz1-h5cue8pqz1.gz
-C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\mr2l8jhmm4-{0}-ua95bbqy3p-ua95bbqy3p.gz
-C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\vfmmlhysg0-{0}-zhk2skbjbp-zhk2skbjbp.gz
-C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\8baphgtjyx-{0}-fd70n3xa4u-fd70n3xa4u.gz
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\staticwebassets.development.json
@@ -1047,3 +1042,8 @@ C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Deb
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\refint\KS.Scheduler.Frontend.dll
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\KS.Scheduler.Frontend.pdb
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\ref\KS.Scheduler.Frontend.dll
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\21qm0y0n3t-{0}-kgal6802xp-kgal6802xp.gz
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\4acf3812wy-{0}-8gow50ux7b-8gow50ux7b.gz
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\mr2l8jhmm4-{0}-66b6nl6q77-66b6nl6q77.gz
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\vfmmlhysg0-{0}-41ittovvle-41ittovvle.gz
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.Frontend\obj\Debug\net8.0\compressed\8baphgtjyx-{0}-cid2mpda69-cid2mpda69.gz

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KS.Scheduler.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af6b0e92847ae6a9281c15ba96250787351e4cc9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c67c6e319a2d5b603e013689b8e07df98f0e364e")]
 [assembly: System.Reflection.AssemblyProductAttribute("KS.Scheduler.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KS.Scheduler.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

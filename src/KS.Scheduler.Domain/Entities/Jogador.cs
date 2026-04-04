@@ -11,14 +11,18 @@ public class Jogador : Entity
         UsuarioId = usuarioId;
         Posicao = posicao;
         NivelHabilidade = nivelHabilidade;
-        //Presencas = new List<Presenca>();
+        Presencas = new List<Presenca>();
     }
 
     public Guid UsuarioId { get; private set; }
-    public virtual Usuario Usuario { get; private set; }
     public string Posicao { get; private set; }
     public NivelHabilidade NivelHabilidade { get; private set; }
+
+    public virtual Usuario Usuario { get; private set; }
     public virtual ICollection<Presenca> Presencas { get; private set; }
-    public void AtualizarHabilidade(NivelHabilidade novoNivel) => NivelHabilidade = novoNivel;
-    public void AtualizarPosicao(string novaPosicao) => Posicao = novaPosicao;
+
+    public void AtualizarHabilidade(NivelHabilidade novoNivel)
+    {
+        NivelHabilidade = novoNivel;
+    }
 }

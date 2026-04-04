@@ -8,19 +8,30 @@ namespace KS.Scheduler.Infrastructure.Persistence.Mappings
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)
         {
-            builder.HasKey(j => j.Id);
+            builder.ToTable("Usuarios");
 
-            builder.Property(j => j.Nome).IsRequired().HasColumnType("varchar(100)");
+            builder.HasKey(u => u.Id);
 
-            builder.Property(j => j.Email).IsRequired().HasColumnType("varchar(50)");
+            builder.Property(u => u.Id)
+                .ValueGeneratedNever();
 
-            builder.Property(j => j.Telefone).IsRequired().HasColumnType("varchar(20)");
+            builder.Property(u => u.Nome)
+                .IsRequired()
+                .HasColumnType("varchar(100)");
 
-            builder.HasIndex(u => u.Email).IsUnique();
+            builder.Property(u => u.Email)
+                .IsRequired()
+                .HasColumnType("varchar(150)");
 
-            builder.Property(u => u.Id).ValueGeneratedNever();
+            builder.Property(u => u.Telefone)
+                .HasColumnType("varchar(20)");
 
-            builder.Property(u => u.SenhaHash).IsRequired().HasColumnType("varchar(200)");
+            builder.Property(u => u.SenhaHash)
+                .IsRequired()
+                .HasColumnType("varchar(200)");
+
+            builder.HasIndex(u => u.Email)
+                .IsUnique();
         }
     }
 }
