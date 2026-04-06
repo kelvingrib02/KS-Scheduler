@@ -7,7 +7,7 @@ public class Usuario : Entity
 
     public Usuario(string nome, string email, string telefone, string senhaHash)
     {
-        Nome = nome;
+        Nome = nome;    
         Email = email;
         Telefone = telefone;
         SenhaHash = senhaHash;

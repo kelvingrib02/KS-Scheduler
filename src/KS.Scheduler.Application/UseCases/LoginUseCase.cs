@@ -1,4 +1,6 @@
-﻿using KS.Scheduler.Application.DTOs.Auth;
+﻿using BCrypt.Net;
+using KS.Scheduler.Application.DTOs.Auth;
+using KS.Scheduler.Application.Interfaces;
 using KS.Scheduler.Domain.Interfaces;
 
 namespace KS.Scheduler.Application.UseCases
@@ -6,34 +8,33 @@ namespace KS.Scheduler.Application.UseCases
     public class LoginUseCase
     {
         private readonly IUsuarioRepository _usuarioRepository;
-        private readonly IAuthService _authService;
+        private readonly ITokenService _tokenService;
 
-        public LoginUseCase(IUsuarioRepository usuarioRepository, IAuthService authService)
+        public LoginUseCase(IUsuarioRepository usuarioRepository, ITokenService tokenService)
         {
             _usuarioRepository = usuarioRepository;
-            _authService = authService;
+            _tokenService = tokenService;
         }
 
-        public async Task<LoginResponse> Executar(LoginRequest request)
+        public async Task<LoginResponseDto> ExecutarAsync(LoginRequestDto request)
         {
             var usuario = await _usuarioRepository.ObterPorEmailAsync(request.Email);
 
             if (usuario == null)
-                throw new Exception("Email ou senha inválidos");
+                throw new Exception("Email ou senha inválidos.");
 
-            var senhaValida = _authService.ValidarSenha(request.Senha, usuario.SenhaHash);
+            var senhaValida = BCrypt.Net.BCrypt.Verify(request.Senha, usuario.SenhaHash);
 
             if (!senhaValida)
-                throw new Exception("Email ou senha inválidos");
+                throw new Exception("Email ou senha inválidos.");
 
-            var token = _authService.GerarToken(usuario.Id, usuario.Email, usuario.Nome);
+            var token = _tokenService.GerarToken(usuario);
 
-            return new LoginResponse
+            return new LoginResponseDto
             {
                 Token = token,
                 Nome = usuario.Nome,
-                Email = usuario.Email,
-                Expiracao = DateTime.UtcNow.AddHours(24)
+                Email = usuario.Email
             };
         }
     }

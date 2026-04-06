@@ -12,31 +12,19 @@ namespace KS.Scheduler.Infrastructure.Persistence.Mappings
 
             builder.HasKey(j => j.Id);
 
-            builder.Property(j => j.Id)
-                .ValueGeneratedNever();
+            builder.Property(j => j.Id).ValueGeneratedNever();
 
-            builder.Property(j => j.Posicao)
-                .IsRequired()
-                .HasColumnType("varchar(50)");
+            builder.Property(j => j.Posicao).IsRequired().HasColumnType("varchar(50)");
 
-            builder.Property(j => j.NivelHabilidade)
-                .IsRequired();
+            builder.Property(j => j.NivelHabilidade).IsRequired();
 
-            builder.Property(j => j.UsuarioId)
-                .IsRequired();
+            builder.Property(j => j.UsuarioId).IsRequired();
 
-            builder.HasOne(j => j.Usuario)
-                .WithOne(u => u.Jogador)
-                .HasForeignKey<Jogador>(j => j.UsuarioId)
-                .OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(j => j.Usuario).WithOne(u => u.Jogador).HasForeignKey<Jogador>(j => j.UsuarioId).OnDelete(DeleteBehavior.NoAction);
 
-            builder.HasIndex(j => j.UsuarioId)
-                .IsUnique();
+            builder.HasIndex(j => j.UsuarioId).IsUnique();
 
-            builder.HasMany(j => j.Presencas)
-                .WithOne(p => p.Jogador)
-                .HasForeignKey(p => p.JogadorId)
-                .OnDelete(DeleteBehavior.NoAction);
+            builder.HasMany(j => j.Presencas).WithOne(p => p.Jogador).HasForeignKey(p => p.JogadorId).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

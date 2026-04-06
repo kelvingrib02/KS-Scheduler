@@ -20,7 +20,7 @@ namespace KS.Scheduler.Application.UseCases
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<LoginResponse> Executar(RegistrarUsuarioRequest request)
+        public async Task<LoginResponseDto> Executar(RegistrarUsuarioRequest request)
         {
             var usuarioExistente = await _usuarioRepository.ObterPorEmailAsync(request.Email);
             if (usuarioExistente != null)
@@ -35,7 +35,7 @@ namespace KS.Scheduler.Application.UseCases
 
             var token = _authService.GerarToken(usuario.Id, usuario.Email, usuario.Nome);
 
-            return new LoginResponse
+            return new LoginResponseDto
             {
                 Token = token,
                 Nome = usuario.Nome,
