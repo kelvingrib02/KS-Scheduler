@@ -39,8 +39,7 @@ namespace KS.Scheduler.Application.UseCases
             {
                 Token = token,
                 Nome = usuario.Nome,
-                Email = usuario.Email,
-                Expiracao = DateTime.UtcNow.AddHours(24)
+                Email = usuario.Email
             };
         }
     }

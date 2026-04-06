@@ -10,6 +10,7 @@ C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\bin\Debug\ne
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\bin\Debug\net8.0\Humanizer.dll
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -146,6 +147,7 @@ C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\obj\Debug\ne
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\obj\Debug\net8.0\KS.Sched.7546C190.Up2Date
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\obj\Debug\net8.0\KS.Scheduler.API.dll
 C:\Users\55129\Documents\Projetos\KS-Scheduler\src\KS.Scheduler.API\obj\Debug\net8.0\refint\KS.Scheduler.API.dll

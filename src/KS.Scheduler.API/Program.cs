@@ -1,4 +1,3 @@
-using KS.Scheduler.API.Services;
 using KS.Scheduler.Application.Interfaces;
 using KS.Scheduler.Application.UseCases;
 using KS.Scheduler.Domain.Interfaces;
@@ -6,7 +5,6 @@ using KS.Scheduler.Infrastructure.Persistence;
 using KS.Scheduler.Infrastructure.Repositories;
 using KS.Scheduler.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -18,7 +16,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<KSSchedulerDbContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<KSSchedulerDbContext>(options =>
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IPartidaRepository, PartidaRepository>();
@@ -36,7 +35,7 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 
 var jwtSecret = builder.Configuration["Jwt:Secret"];
-var key = Encoding.UTF8.GetBytes(jwtSecret);
+var key = Encoding.UTF8.GetBytes(jwtSecret!);
 
 builder.Services.AddAuthentication(options =>
 {
