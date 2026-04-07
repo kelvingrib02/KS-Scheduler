@@ -1,19 +1,18 @@
 ﻿@page "/login"
 @layout Layout.EmptyLayout
 @inject NavigationManager NavManager
+@inject KS.Scheduler.Frontend.Services.AuthService AuthService
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
 
 <PageTitle>Login - KS Scheduler</PageTitle>
 
 <div class="login-container d-flex align-items-center justify-content-center">
-
     <div class="login-card animate-up">
-
         <div class="text-center mb-4">
             <div class="logo fw-bold text-white fs-2 mb-2">KS <span class="text-gradient">Scheduler</span></div>
         </div>
 
         <div class="login-form">
-
             @if (!string.IsNullOrEmpty(errorMessage))
             {
                 <div class="alert alert-danger py-2 text-center small mb-3">
@@ -23,19 +22,30 @@
 
             <div class="mb-3">
                 <label class="form-label text-white small fw-bold">E-MAIL</label>
-                <input type="email" class="form-control custom-input" placeholder="ex: craque@bola.com" @bind="email">
+                <input type="email"
+                       class="form-control custom-input"
+                       placeholder="ex: craque@bola.com"
+                       @bind="email" />
             </div>
 
             <div class="mb-4">
                 <div class="d-flex justify-content-between">
                     <label class="form-label text-white small fw-bold">SENHA</label>
                 </div>
-                <input type="password" class="form-control custom-input" placeholder="••••••••" @bind="password" @onkeyup="EnterKeyHandler">
+
+                <input type="password"
+                       class="form-control custom-input"
+                       placeholder="••••••••"
+                       @bind="password"
+                       @onkeyup="EnterKeyHandler" />
+
                 <a href="#" class="small text-primary text-decoration-none">Esqueceu a senha?</a>
             </div>
 
-            <button class="btn btn-cta w-100 mb-3" @onclick="FazerLogin">
-                ENTRAR EM CAMPO
+            <button class="btn btn-cta w-100 mb-3"
+                    @onclick="FazerLogin"
+                    disabled="@isLoading">
+                @(isLoading ? "ENTRANDO..." : "ENTRAR EM CAMPO")
             </button>
 
             <div class="text-center">
@@ -46,133 +56,58 @@
     </div>
 </div>
 
-<style>
-    :root {
-        --bg-dark: #0f172a;
-        --card-bg: #1e293b;
-        --input-bg: #0f172a;
-        --primary: #10b981;
-        --primary-dark: #047857;
-        --text-gray: #94a3b8;
-    }
-
-    body {
-        background-color: var(--bg-dark);
-        font-family: 'Inter', sans-serif;
-    }
-
-    .login-container {
-        min-height: 100vh;
-        width: 100%;
-        background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
-    }
-
-    .login-card {
-        background-color: var(--card-bg);
-        width: 100%;
-        max-width: 400px;
-        padding: 2.5rem;
-        border-radius: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    }
-
-    .text-gradient {
-        background: linear-gradient(135deg, #34d399 0%, #059669 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .text-gray {
-        color: var(--text-gray);
-    }
-
-    .text-primary {
-        color: var(--primary) !important;
-    }
-
-    .custom-input {
-        background-color: var(--input-bg);
-        border: 1px solid #334155;
-        color: white;
-        padding: 0.8rem 1rem;
-        border-radius: 12px;
-        font-size: 0.95rem;
-    }
-
-        .custom-input:focus {
-            background-color: var(--input-bg);
-            border-color: var(--primary);
-            color: white;
-            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
-        }
-
-        .custom-input::placeholder {
-            color: #475569;
-        }
-
-    .btn-cta {
-        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-        color: white;
-        border: none;
-        padding: 0.9rem;
-        font-weight: bold;
-        border-radius: 12px;
-        transition: transform 0.2s;
-        box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
-    }
-
-        .btn-cta:hover {
-            transform: translateY(-2px);
-            color: white;
-            box-shadow: 0 15px 25px -5px rgba(16, 185, 129, 0.4);
-        }
-
-    .animate-up {
-        animation: fadeInUp 0.6s ease-out forwards;
-    }
-
-    @@keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-</style>
-
 @code {
     private string email = "";
     private string password = "";
     private string errorMessage = "";
+    private bool isLoading = false;
 
-    private void FazerLogin()
+    private async Task FazerLogin()
     {
+        errorMessage = "";
+
         if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
         {
             errorMessage = "Preencha todos os campos!";
             return;
         }
 
-        if (email == "123" && password == "123")
+        try
         {
+            isLoading = true;
+
+            var request = new KS.Scheduler.Frontend.DTOs.Auth.LoginRequestDto
+            {
+                Email = email,
+                Senha = password
+            };
+
+            var response = await AuthService.LoginAsync(request);
+
+            if (response is null || string.IsNullOrWhiteSpace(response.Token))
+            {
+                errorMessage = "E-mail ou senha inválidos. Tente novamente.";
+                return;
+            }
+
+
             NavManager.NavigateTo("/home");
         }
-        else
+        catch
         {
-            errorMessage = "E-mail ou senha inválidos. Tente novamente.";
+            errorMessage = "Erro ao tentar fazer login. Verifique a API.";
+        }
+        finally
+        {
+            isLoading = false;
         }
     }
 
-    private void EnterKeyHandler(KeyboardEventArgs e)
+    private async Task EnterKeyHandler(KeyboardEventArgs e)
     {
         if (e.Key == "Enter")
         {
-            FazerLogin();
+            await FazerLogin();
         }
     }
 }

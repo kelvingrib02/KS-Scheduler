@@ -38,10 +38,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFuZGluZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/55129/Documents/Projetos/KS-Scheduler/src/KS.Scheduler.Frontend/Pages/Login.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/55129/Documents/Projetos/KS-Scheduler/src/KS.Scheduler.Frontend/Pages/Menus/CriarPartida.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudXNcQ3JpYXJQYXJ0aWRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -77,3 +73,7 @@ build_metadata.AdditionalFiles.CssScope = b-dmjhyqg0mk
 [C:/Users/55129/Documents/Projetos/KS-Scheduler/src/KS.Scheduler.Frontend/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-w1lldbvjgz
+
+[C:/Users/55129/Documents/Projetos/KS-Scheduler/src/KS.Scheduler.Frontend/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-4t6aqxo2s5
