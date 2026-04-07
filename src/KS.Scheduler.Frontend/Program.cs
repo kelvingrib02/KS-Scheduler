@@ -10,7 +10,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient
 {
-    BaseAddress = new Uri("http://localhost:5185/")
+    BaseAddress = new Uri("https://localhost:7236/")
 });
 
 builder.Services.AddBlazoredLocalStorage();

@@ -34,11 +34,6 @@ builder.Services.AddScoped<LoginUseCase>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 
-builder.Services.AddScoped(sp => new HttpClient
-{
-    BaseAddress = new Uri("https://localhost:5185/")
-});
-
 var jwtSecret = builder.Configuration["Jwt:Secret"];
 var key = Encoding.UTF8.GetBytes(jwtSecret!);
 
@@ -63,11 +58,12 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("LiberarGeral", policy =>
+    options.AddPolicy("LiberarFrontend", policy =>
     {
-        policy.AllowAnyOrigin()
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy
+            .WithOrigins("https://localhost:7236")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
 
@@ -80,7 +76,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseCors("LiberarGeral");
+app.UseCors("LiberarFrontend");
 
 app.UseAuthentication();
 app.UseAuthorization();
