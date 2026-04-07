@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "KS.Scheduler.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "KS.Scheduler.Application.DTOs.Auth.LoginRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "KS.Scheduler.Api.Controllers.PartidasController",
     "Method": "CriarPartida",
     "RelativePath": "api/Partidas",

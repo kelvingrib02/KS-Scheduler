@@ -1,4 +1,4 @@
-﻿namespace KS.Scheduler.Application.DTOs.Auth
+﻿namespace KS.Scheduler.Frontend.DTOs.Auth
 {
     public class LoginRequestDto
     {

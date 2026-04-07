@@ -1,13 +1,19 @@
+using Blazored.LocalStorage;
+using KS.Scheduler.Frontend;
+using KS.Scheduler.Frontend.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using KS.Scheduler.Frontend;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-var urlDaApi = "http://localhost:5185";
+builder.Services.AddScoped(sp => new HttpClient
+{
+    BaseAddress = new Uri("http://localhost:5185/")
+});
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(urlDaApi) });
+builder.Services.AddBlazoredLocalStorage();
+builder.Services.AddScoped<AuthService>();
 
 await builder.Build().RunAsync();

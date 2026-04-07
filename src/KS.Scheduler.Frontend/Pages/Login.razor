@@ -93,9 +93,9 @@
 
             NavManager.NavigateTo("/home");
         }
-        catch
+        catch (Exception ex)
         {
-            errorMessage = "Erro ao tentar fazer login. Verifique a API.";
+            errorMessage = $"Erro ao tentar fazer login: {ex.InnerException?.Message ?? ex.Message}";
         }
         finally
         {

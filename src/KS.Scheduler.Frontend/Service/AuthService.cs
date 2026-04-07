@@ -1,4 +1,4 @@
-﻿using KS.Scheduler.Application.DTOs.Auth;
+﻿using KS.Scheduler.Frontend.DTOs.Auth;
 using System.Net.Http.Json;
 
 namespace KS.Scheduler.Frontend.Services
